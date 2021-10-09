@@ -1,0 +1,229 @@
+
+;; !  | means mandatory
+;; #  | means optional
+;; C  | left_command
+;; T  | left_control
+;; O  | left_option
+;; S  | left_shift
+;; F  | fn
+;; Q  | right_command
+;; W  | right_control
+;; E  | right_option
+;; R  | right_shift
+;; P  | caps_lock
+;; !! | mandatory command + control + optional + shift (hyper)
+;; ## | optional any
+
+{
+      ;; Define different kinds of keyboards
+:devices {
+    :kb-apple [                                            ;; Internal MacBook Pro 16" 2021 keyboard
+
+        {:vendor_id 1452,   
+        :product_id 832 }                           
+    ]
+    :kb-logitech-k860 [                                     ;; Logitech K860 Ergo keyboard
+        {:vendor_id 1133,
+         :product_id 45913 }
+      ]
+
+} ;; devices
+      
+      :main [
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Set PC style keyboard layout
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "option 0 to option shift 9 (})" :rules
+            [[:!O0 :!OS9]
+            [:!E0 :!OS9]]      
+      }
+      {:des "option 7 to option shift 8 ({)" :rules 
+            [[:!O7 :!OS8] 
+            [:!E7 :!OS8]]      
+      }
+      {:des "option hyphen to option shift 7 (backslash)" :rules 
+            [[:!Ohyphen :!OS7]
+            [:!Ehyphen :!OS7]]      
+      }
+      {:des "option grave_accent_and_tilde to option 7 (|)" :rules 
+            [[:!Ograve_accent_and_tilde :!O7]
+            [:!Egrave_accent_and_tilde :!O7]]      
+      }
+      ; This is to make the media key for showing mission control work on Logitech K860
+      {:des "left command up arrow to left control up arrow" :rules 
+            [[:!Cup_arrow :!Tup_arrow]] 
+      }
+      ; This is to make the media key search work on Logitech K860
+      {:des "left option spacebar to left command spacebar" :rules 
+            [[:!Ospacebar :!Cspacebar]]
+      }
+            
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Media Control
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "shift command spacebar to play_or_pause" :rules 
+            ;; We first check Edge to see if a Udemy course is active. If so we rewind that and don't care about
+            ;; Youtube. If there is no Udemy course active we instead check Firefox for any open Youtube stream.
+            ;; Since Firefox doesn't support AppleScript I don't know how to go through non active tabs. 
+            ;; However, it might be better anyway to only check the active tab. We do this through System Events.
+            [[:!SCspacebar "osascript -e '
+
+            tell application \"System Events\"
+                  set frontmostProcess to first process where it is frontmost
+            end tell 
+
+            set foundMediaPlayer to false
+            tell application \"Microsoft Edge\"
+                  set win_List to every window
+                  
+                  set winIndex to 0
+                  repeat with win in win_List
+                        set tab_list to every tab of win
+                        set tabIndex to 1
+                        repeat with t in tab_list
+                              set myUrl to (URL of t as string)
+                              if myUrl contains \"udemy\" then
+                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
+                                    activate application \"Microsoft Edge\"
+                                    set foundMediaPlayer to true
+                              end if
+                              set tabIndex to tabIndex + 1
+                        end repeat
+                        set winIndex to winIndex + 1
+                  end repeat
+            end tell
+
+            if foundMediaPlayer is false
+            
+                  tell application \"System Events\" to tell process \"firefox\"
+                        if name of window 1 contains \"YouTube\" then
+                              set frontmost to true
+                        end if
+                  end tell
+            end if
+
+            tell application \"System Events\"
+                  key code 49 -- spacebar
+                  delay 0.1
+                  set frontmost of frontmostProcess to true
+            end tell
+
+            '"]]
+      }
+      {:des "shift command left to rewind" :rules 
+            [[:!SCleft_arrow "osascript -e '
+
+            tell application \"System Events\"
+                  set frontmostProcess to first process where it is frontmost
+            end tell
+
+            set foundMediaPlayer to false
+            tell application \"Microsoft Edge\"
+                  set win_List to every window
+                  
+                  set winIndex to 0
+                  repeat with win in win_List
+                        set tab_list to every tab of win
+                        set tabIndex to 1
+                        repeat with t in tab_list
+                              set myUrl to (URL of t as string)
+                              if myUrl contains \"udemy\" then
+                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
+                                    activate application \"Microsoft Edge\"
+                                    set foundMediaPlayer to true
+                              end if
+                              set tabIndex to tabIndex + 1
+                        end repeat
+                        set winIndex to winIndex + 1
+                  end repeat
+            end tell
+
+            if foundMediaPlayer is false
+            
+                  tell application \"System Events\" to tell process \"firefox\"
+                        if name of window 1 contains \"YouTube\" then
+                              set frontmost to true
+                        end if
+                  end tell
+            end if
+
+            tell application \"System Events\"
+                  key code 123 -- left arrow
+                  delay 0.1
+                  set frontmost of frontmostProcess to true
+            end tell
+
+            '"]]
+      }
+      {:des "shift command right to fast forward" :rules 
+            [[:!SCright_arrow "osascript -e '
+
+            tell application \"System Events\"
+                  set frontmostProcess to first process where it is frontmost
+            end tell
+
+            set foundMediaPlayer to false
+            tell application \"Microsoft Edge\"
+                  set win_List to every window
+                         
+                  set winIndex to 0
+                  repeat with win in win_List
+                        set tab_list to every tab of win
+                        set tabIndex to 1
+                        repeat with t in tab_list
+                              set myUrl to (URL of t as string)
+                              if myUrl contains \"udemy\" then
+                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
+                                    activate application \"Microsoft Edge\"
+                                    set foundMediaPlayer to true
+                              end if
+                              set tabIndex to tabIndex + 1
+                        end repeat
+                        set winIndex to winIndex + 1
+                  end repeat
+            end tell
+
+            if foundMediaPlayer is false
+            
+                  tell application \"System Events\" to tell process \"firefox\"
+                        if name of window 1 contains \"YouTube\" then
+                              set frontmost to true
+                        end if
+                  end tell
+            end if
+
+            tell application \"System Events\"
+                  key code 124 -- right arrow
+                  delay 0.1
+                  set frontmost of frontmostProcess to true
+            end tell
+
+            '"]]
+      }
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Focus To-Do
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "left_shift left_option p to play/pause Focus-to-do" :rules 
+            [[:!SOp "osascript -e '
+
+            tell application \"System Events\"
+                  tell process \"Focus To-Do\"
+                        click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                  end tell
+            end tell
+
+            '"]]
+      }
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Misc
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "left_shift left_option d to print today's date" :rules 
+            [[:!SOd "osascript -e '
+            tell application \"System Events\"
+            set _Date to (current date)
+            keystroke (year of _Date as text) & \"-\" & text -2 thru -1 of (\"00\" & ((month of _Date) as integer)) & \"-\" & (day of _Date as text)
+            end tell
+            '"]]
+      }
+]}

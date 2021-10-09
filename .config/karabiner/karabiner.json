@@ -1,0 +1,474 @@
+{
+  "global" : {
+    "check_for_updates_on_startup" : true,
+    "show_in_menu_bar" : false,
+    "show_profile_name_in_menu_bar" : false
+  },
+  "profiles" : [ {
+    "complex_modifications" : {
+      "parameters" : {
+        "basic.simultaneous_threshold_milliseconds" : 50,
+        "basic.to_delayed_action_delay_milliseconds" : 500,
+        "basic.to_if_alone_timeout_milliseconds" : 1000,
+        "basic.to_if_held_down_threshold_milliseconds" : 500
+      },
+      "rules" : [ {
+        "description" : "option 0 to option shift 9 (})",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "0",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "9",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "0",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "9",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "option 7 to option shift 8 ({)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "8",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "8",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "option hyphen to option shift 7 (backslash)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "hyphen",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "hyphen",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "option grave_accent_and_tilde to option 7 (|)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : {
+              "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "7",
+            "modifiers" : [ "left_option" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left command up arrow to left control up arrow",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "up_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "up_arrow",
+            "modifiers" : [ "left_control" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left option spacebar to left command spacebar",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "spacebar",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "shift command spacebar to play_or_pause",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell \n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 49 -- spacebar\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "shift command left to rewind",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 123 -- left arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "shift command right to fast forward",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "right_arrow",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                         \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 124 -- right arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left_shift left_option p to play/pause Focus-to-do",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  tell process \"Focus To-Do\"\n                        click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                  end tell\n            end tell\n\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left_shift left_option d to print today's date",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"System Events\"\n            set _Date to (current date)\n            keystroke (year of _Date as text) & \"-\" & text -2 thru -1 of (\"00\" & ((month of _Date) as integer)) & \"-\" & (day of _Date as text)\n            end tell\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      } ]
+    },
+    "devices" : [ {
+      "disable_built_in_keyboard_if_exists" : false,
+      "fn_function_keys" : [ ],
+      "identifiers" : {
+        "is_keyboard" : true,
+        "is_pointing_device" : false,
+        "product_id" : 50475,
+        "vendor_id" : 1133
+      },
+      "ignore" : false,
+      "manipulate_caps_lock_led" : true,
+      "simple_modifications" : [ {
+        "from" : {
+          "key_code" : "left_control"
+        },
+        "to" : [ {
+          "key_code" : "left_command"
+        } ]
+      }, {
+        "from" : {
+          "key_code" : "right_option"
+        },
+        "to" : [ {
+          "key_code" : "right_command"
+        } ]
+      } ]
+    }, {
+      "disable_built_in_keyboard_if_exists" : false,
+      "fn_function_keys" : [ ],
+      "identifiers" : {
+        "is_keyboard" : true,
+        "is_pointing_device" : false,
+        "product_id" : 832,
+        "vendor_id" : 1452
+      },
+      "ignore" : true,
+      "manipulate_caps_lock_led" : true,
+      "simple_modifications" : [ {
+        "from" : {
+          "apple_vendor_top_case_key_code" : "keyboard_fn"
+        },
+        "to" : [ {
+          "key_code" : "left_command"
+        } ]
+      }, {
+        "from" : {
+          "key_code" : "left_control"
+        },
+        "to" : [ {
+          "apple_vendor_top_case_key_code" : "keyboard_fn"
+        } ]
+      }, {
+        "from" : {
+          "key_code" : "right_option"
+        },
+        "to" : [ {
+          "key_code" : "delete_forward"
+        } ]
+      } ]
+    }, {
+      "disable_built_in_keyboard_if_exists" : true,
+      "fn_function_keys" : [ ],
+      "identifiers" : {
+        "is_keyboard" : true,
+        "is_pointing_device" : true,
+        "product_id" : 45913,
+        "vendor_id" : 1133
+      },
+      "ignore" : false,
+      "manipulate_caps_lock_led" : true,
+      "simple_modifications" : [ {
+        "from" : {
+          "key_code" : "left_control"
+        },
+        "to" : [ {
+          "key_code" : "left_command"
+        } ]
+      }, {
+        "from" : {
+          "key_code" : "right_option"
+        },
+        "to" : [ {
+          "key_code" : "right_control"
+        } ]
+      } ]
+    }, {
+      "disable_built_in_keyboard_if_exists" : false,
+      "fn_function_keys" : [ ],
+      "identifiers" : {
+        "is_keyboard" : false,
+        "is_pointing_device" : true,
+        "product_id" : 45088,
+        "vendor_id" : 1133
+      },
+      "ignore" : true,
+      "manipulate_caps_lock_led" : false,
+      "simple_modifications" : [ ]
+    }, {
+      "disable_built_in_keyboard_if_exists" : false,
+      "fn_function_keys" : [ ],
+      "identifiers" : {
+        "is_keyboard" : true,
+        "is_pointing_device" : false,
+        "product_id" : 34304,
+        "vendor_id" : 1452
+      },
+      "ignore" : true,
+      "manipulate_caps_lock_led" : true,
+      "simple_modifications" : [ ]
+    } ],
+    "fn_function_keys" : [ {
+      "from" : {
+        "key_code" : "f1"
+      },
+      "to" : [ {
+        "consumer_key_code" : "display_brightness_increment"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f2"
+      },
+      "to" : [ {
+        "consumer_key_code" : "display_brightness_increment"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f3"
+      },
+      "to" : [ {
+        "apple_vendor_keyboard_key_code" : "mission_control"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f4"
+      },
+      "to" : [ {
+        "apple_vendor_keyboard_key_code" : "spotlight"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f5"
+      },
+      "to" : [ {
+        "apple_vendor_keyboard_key_code" : "brightness_up"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f6"
+      },
+      "to" : [ {
+        "key_code" : "f6"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f7"
+      },
+      "to" : [ {
+        "consumer_key_code" : "rewind"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f8"
+      },
+      "to" : [ {
+        "consumer_key_code" : "play_or_pause"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f9"
+      },
+      "to" : [ {
+        "consumer_key_code" : "fast_forward"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f10"
+      },
+      "to" : [ {
+        "consumer_key_code" : "mute"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f11"
+      },
+      "to" : [ {
+        "consumer_key_code" : "volume_decrement"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "f12"
+      },
+      "to" : [ {
+        "consumer_key_code" : "volume_increment"
+      } ]
+    } ],
+    "name" : "Default",
+    "parameters" : {
+      "delay_milliseconds_before_open_device" : 1000
+    },
+    "selected" : true,
+    "simple_modifications" : [ {
+      "from" : {
+        "consumer_key_code" : "play_or_pause"
+      },
+      "to" : [ {
+        "shell_command" : "osascript -e '\n\n     beep\n\n      tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell \n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 49 -- spacebar\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+      } ]
+    }, {
+      "from" : {
+        "consumer_key_code" : "scan_previous_track"
+      },
+      "to" : [ {
+        "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 123 -- left arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "left_command"
+      },
+      "to" : [ {
+        "key_code" : "left_option"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "left_option"
+      },
+      "to" : [ {
+        "key_code" : "left_control"
+      } ]
+    }, {
+      "from" : {
+        "key_code" : "right_command"
+      },
+      "to" : [ {
+        "key_code" : "right_option"
+      } ]
+    }, {
+      "from" : {
+        "consumer_key_code" : "scan_next_track"
+      },
+      "to" : [ {
+        "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 124 -- right arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+      } ]
+    } ],
+    "virtual_hid_keyboard" : {
+      "country_code" : 0,
+      "indicate_sticky_modifier_keys_state" : true,
+      "mouse_key_xy_scale" : 100
+    }
+  } ]
+}

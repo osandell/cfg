@@ -1,0 +1,31 @@
+[user]
+	email = olof@grebban.com
+	name = Olof Sandell
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[pager]
+	branch = 
+	log = 
+	diff = 
+[merge]
+	conflictStyle = diff3
+	tool = vscode
+[rerere]
+	enabled = true
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[mergetool]
+	keepBackup = false
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[diff]
+	tool = vscode
+[rebase]
+	abbreviatieCommands = true
+	autoSquash = true
+[credential]
+	helper = osxkeychain
