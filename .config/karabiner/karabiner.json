@@ -151,6 +151,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "left_command y to left_command left_shift z",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "shift command spacebar to play_or_pause",
         "manipulators" : [ {
           "from" : {
@@ -188,7 +203,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                         \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 124 -- right arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"firefox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 124 -- right arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
           } ],
           "type" : "basic"
         } ]

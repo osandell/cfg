@@ -57,7 +57,10 @@
       {:des "left option spacebar to left command spacebar" :rules 
             [[:!Ospacebar :!Cspacebar]]
       }
-            
+      ; Windows style redo
+      {:des "left_command y to left_command left_shift z" :rules 
+            [[:!Cy :!SCz]]  
+      }
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -165,7 +168,7 @@
             set foundMediaPlayer to false
             tell application \"Microsoft Edge\"
                   set win_List to every window
-                         
+                  
                   set winIndex to 0
                   repeat with win in win_List
                         set tab_list to every tab of win
