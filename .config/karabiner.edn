@@ -98,7 +98,7 @@
 
             if foundMediaPlayer is false
             
-                  tell application \"System Events\" to tell process \"firefox\"
+                  tell application \"System Events\" to tell process \"waterfox\"
                         if name of window 1 contains \"YouTube\" then
                               set frontmost to true
                         end if
@@ -143,7 +143,7 @@
 
             if foundMediaPlayer is false
             
-                  tell application \"System Events\" to tell process \"firefox\"
+                  tell application \"System Events\" to tell process \"waterfox\"
                         if name of window 1 contains \"YouTube\" then
                               set frontmost to true
                         end if
@@ -188,7 +188,7 @@
 
             if foundMediaPlayer is false
             
-                  tell application \"System Events\" to tell process \"firefox\"
+                  tell application \"System Events\" to tell process \"waterfox\"
                         if name of window 1 contains \"YouTube\" then
                               set frontmost to true
                         end if
