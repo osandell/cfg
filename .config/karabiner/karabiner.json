@@ -254,13 +254,13 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "caps lock to command",
+        "description" : "caps lock to control",
         "manipulators" : [ {
           "from" : {
             "key_code" : "caps_lock"
           },
           "to" : [ {
-            "key_code" : "left_command"
+            "key_code" : "left_control"
           } ],
           "type" : "basic"
         } ]

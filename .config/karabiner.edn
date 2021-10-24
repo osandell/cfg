@@ -229,8 +229,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "caps lock to command" :rules 
-            [[:caps_lock :left_command]] 
+      {:des "caps lock to control" :rules 
+            [[:caps_lock :left_control]] 
       } 
 
       {:des "left_shift left_option d to print today's date" :rules 
