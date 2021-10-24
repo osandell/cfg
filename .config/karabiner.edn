@@ -61,6 +61,14 @@
       {:des "left_command y to left_command left_shift z" :rules 
             [[:!Cy :!SCz]]  
       }
+      ; Windows style app switching
+      {:des "left option tab to left command tab" :rules 
+            [[:!O##tab :!Ctab]] 
+      }
+      {:des "left command tab to left option tab" :rules 
+            [[:!C##tab :!Otab]] 
+      }
+
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -222,9 +230,9 @@
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "caps lock to command" :rules 
-            [[:caps_lock :left_command]]
+            [[:caps_lock :left_command]] 
       } 
-      
+
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
             tell application \"System Events\"
