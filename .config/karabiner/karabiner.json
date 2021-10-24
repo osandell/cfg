@@ -222,6 +222,17 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "caps lock to command",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "caps_lock"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "left_shift left_option d to print today's date",
         "manipulators" : [ {
           "from" : {

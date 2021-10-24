@@ -221,6 +221,10 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "caps lock to command" :rules 
+            [[:caps_lock :left_command]]
+      } 
+      
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
             tell application \"System Events\"
