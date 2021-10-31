@@ -292,6 +292,21 @@
           } ],
           "type" : "basic"
         } ]
+      }, {
+        "description" : "left ctrl § to swap windows within app",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "non_us_backslash",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
       } ]
     },
     "devices" : [ {

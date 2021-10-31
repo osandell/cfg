@@ -270,4 +270,8 @@
             end tell
             '"]]
       }
+
+      {:des "left ctrl § to swap windows within app" :rules 
+            [[:!Tnon_us_backslash :!Cgrave_accent_and_tilde]] 
+      } 
 ]}
