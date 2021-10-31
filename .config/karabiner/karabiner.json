@@ -240,7 +240,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_shift left_option p to play/pause Focus-to-do",
+        "description" : "left_shift left_option p to play/pause in Focus-to-do",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
@@ -250,6 +250,20 @@
           },
           "to" : [ {
             "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  tell process \"Focus To-Do\"\n                        --> The number of the group with the play / pause button changes if we open the right pane by double clicking a subtask\n                        try\n                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                        on error\n                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                        end try\n                  end tell\n            end tell\n\n            '"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left_shift left_option n to skip pause in Focus-to-do",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "n",
+            "modifiers" : {
+              "mandatory" : [ "left_option", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  tell process \"Focus To-Do\"\n                        --> The number of the group with the play / pause button changes if we open the right pane by double clicking a subtask\n                        try\n                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                              delay 0.5\n                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                              delay 0.5\n                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                        on error\n                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                              delay 0.5\n                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                              delay 0.5\n                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1\n                        end try\n                  end tell\n            end tell\n\n            '"
           } ],
           "type" : "basic"
         } ]

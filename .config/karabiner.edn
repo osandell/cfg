@@ -214,7 +214,7 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "left_shift left_option p to play/pause Focus-to-do" :rules 
+      {:des "left_shift left_option p to play/pause in Focus-to-do" :rules 
             [[:!SOp "osascript -e '
 
             tell application \"System Events\"
@@ -223,6 +223,30 @@
                         try
                               click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
                         on error
+                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                        end try
+                  end tell
+            end tell
+
+            '"]]
+      }
+      {:des "left_shift left_option n to skip pause in Focus-to-do" :rules 
+            [[:!SOn "osascript -e '
+
+            tell application \"System Events\"
+                  tell process \"Focus To-Do\"
+                        --> The number of the group with the play / pause button changes if we open the right pane by double clicking a subtask
+                        try
+                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                              delay 0.5
+                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                              delay 0.5
+                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                        on error
+                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                              delay 0.5
+                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
+                              delay 0.5
                               click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
                         end try
                   end tell
