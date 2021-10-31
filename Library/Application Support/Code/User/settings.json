@@ -106,5 +106,9 @@
       "before": ["<Leader>", "O"],
       "after": ["O", "<Esc>"]
     }
-  ]
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
