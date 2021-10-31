@@ -25,6 +25,11 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+pagedown",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
@@ -48,5 +53,19 @@
     "key": "ctrl+l",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "explorerViewletFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-workbench.action.closeActiveEditor"
   }
 ]
