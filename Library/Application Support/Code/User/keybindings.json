@@ -35,6 +35,11 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "!editorTextFocus"
+  },
+  {
     "key": "cmd+n",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus"
