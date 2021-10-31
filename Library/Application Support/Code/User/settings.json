@@ -87,6 +87,10 @@
       "commands": ["workbench.action.files.save"]
     },
     {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
       "before": ["<Leader>", "p"],
       "commands": ["workbench.action.showCommands"]
     },
