@@ -99,6 +99,10 @@
             [[:##caps_lock :left_control nil {:alone :escape}]]
       }
 
+      {:des "esc to caps lock" :rules
+            [[:##escape :caps_lock]]
+      }
+
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
             tell application \"System Events\"

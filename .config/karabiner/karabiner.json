@@ -285,6 +285,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "esc to caps lock",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "escape",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "caps_lock"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "left_shift left_option d to print today's date",
         "manipulators" : [ {
           "from" : {
