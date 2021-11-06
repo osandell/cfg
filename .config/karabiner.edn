@@ -103,6 +103,11 @@
             [[:##escape :caps_lock]]
       }
 
+      {:des "move tabs left / right with control shift j / k" :rules
+            [[:!TSj :!COleft_arrow],
+            [:!TSk :!COright_arrow]]
+      }
+
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
             tell application \"System Events\"
