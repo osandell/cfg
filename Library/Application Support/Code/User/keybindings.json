@@ -72,5 +72,25 @@
   {
     "key": "cmd+w",
     "command": "-workbench.action.closeActiveEditor"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "alt+cmd+pagedown",
+    "command": "-workbench.action.terminal.scrollDown",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "alt+cmd+pageup",
+    "command": "-workbench.action.terminal.scrollUp",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   }
 ]
