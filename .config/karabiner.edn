@@ -95,9 +95,9 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "caps lock to control" :rules 
-            [[:caps_lock :left_control]] 
-      } 
+      {:des   "caps lock to control / alone: esc" :rules 
+            [[:##caps_lock :left_control nil {:alone :escape}]]
+      }
 
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
