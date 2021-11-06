@@ -73,186 +73,23 @@
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "shift command spacebar to play_or_pause" :rules 
-            ;; We first check Edge to see if a Udemy course is active. If so we rewind that and don't care about
-            ;; Youtube. If there is no Udemy course active we instead check Firefox for any open Youtube stream.
-            ;; Since Firefox doesn't support AppleScript I don't know how to go through non active tabs. 
-            ;; However, it might be better anyway to only check the active tab. We do this through System Events.
-            [[:!SCspacebar "osascript -e '
-
-            tell application \"System Events\"
-                  set frontmostProcess to first process where it is frontmost
-            end tell 
-
-            set foundMediaPlayer to false
-            tell application \"Microsoft Edge\"
-                  set win_List to every window
-                  
-                  set winIndex to 0
-                  repeat with win in win_List
-                        set tab_list to every tab of win
-                        set tabIndex to 1
-                        repeat with t in tab_list
-                              set myUrl to (URL of t as string)
-                              if myUrl contains \"udemy\" then
-                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
-                                    activate application \"Microsoft Edge\"
-                                    set foundMediaPlayer to true
-                              end if
-                              set tabIndex to tabIndex + 1
-                        end repeat
-                        set winIndex to winIndex + 1
-                  end repeat
-            end tell
-
-            if foundMediaPlayer is false
-            
-                  tell application \"System Events\" to tell process \"waterfox\"
-                        if name of window 1 contains \"YouTube\" then
-                              set frontmost to true
-                        end if
-                  end tell
-            end if
-
-            tell application \"System Events\"
-                  key code 49 -- spacebar
-                  delay 0.1
-                  set frontmost of frontmostProcess to true
-            end tell
-
-            '"]]
+          [[:!SCspacebar "osascript ~/scripts/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
       {:des "shift command left to rewind" :rules 
-            [[:!SCleft_arrow "osascript -e '
-
-            tell application \"System Events\"
-                  set frontmostProcess to first process where it is frontmost
-            end tell
-
-            set foundMediaPlayer to false
-            tell application \"Microsoft Edge\"
-                  set win_List to every window
-                  
-                  set winIndex to 0
-                  repeat with win in win_List
-                        set tab_list to every tab of win
-                        set tabIndex to 1
-                        repeat with t in tab_list
-                              set myUrl to (URL of t as string)
-                              if myUrl contains \"udemy\" then
-                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
-                                    activate application \"Microsoft Edge\"
-                                    set foundMediaPlayer to true
-                              end if
-                              set tabIndex to tabIndex + 1
-                        end repeat
-                        set winIndex to winIndex + 1
-                  end repeat
-            end tell
-
-            if foundMediaPlayer is false
-            
-                  tell application \"System Events\" to tell process \"waterfox\"
-                        if name of window 1 contains \"YouTube\" then
-                              set frontmost to true
-                        end if
-                  end tell
-            end if
-
-            tell application \"System Events\"
-                  key code 123 -- left arrow
-                  delay 0.1
-                  set frontmost of frontmostProcess to true
-            end tell
-
-            '"]]
+          [[:!SCleft_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
       {:des "shift command right to fast forward" :rules 
-            [[:!SCright_arrow "osascript -e '
-
-            tell application \"System Events\"
-                  set frontmostProcess to first process where it is frontmost
-            end tell
-
-            set foundMediaPlayer to false
-            tell application \"Microsoft Edge\"
-                  set win_List to every window
-                  
-                  set winIndex to 0
-                  repeat with win in win_List
-                        set tab_list to every tab of win
-                        set tabIndex to 1
-                        repeat with t in tab_list
-                              set myUrl to (URL of t as string)
-                              if myUrl contains \"udemy\" then
-                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex
-                                    activate application \"Microsoft Edge\"
-                                    set foundMediaPlayer to true
-                              end if
-                              set tabIndex to tabIndex + 1
-                        end repeat
-                        set winIndex to winIndex + 1
-                  end repeat
-            end tell
-
-            if foundMediaPlayer is false
-            
-                  tell application \"System Events\" to tell process \"waterfox\"
-                        if name of window 1 contains \"YouTube\" then
-                              set frontmost to true
-                        end if
-                  end tell
-            end if
-
-            tell application \"System Events\"
-                  key code 124 -- right arrow
-                  delay 0.1
-                  set frontmost of frontmostProcess to true
-            end tell
-
-            '"]]
+          [[:!SCright_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]]
       }
+
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "left_shift left_option p to play/pause in Focus-to-do" :rules 
-            [[:!SOp "osascript -e '
-
-            tell application \"System Events\"
-                  tell process \"Focus To-Do\"
-                        --> The number of the group with the play / pause button changes if we open the right pane by double clicking a subtask
-                        try
-                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                        on error
-                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                        end try
-                  end tell
-            end tell
-
-            '"]]
+            [[:!SOp "osascript ~/scripts/focus-to-do/pause.scpt"]]
       }
       {:des "left_shift left_option n to skip pause in Focus-to-do" :rules 
-            [[:!SOn "osascript -e '
-
-            tell application \"System Events\"
-                  tell process \"Focus To-Do\"
-                        --> The number of the group with the play / pause button changes if we open the right pane by double clicking a subtask
-                        try
-                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                              delay 0.5
-                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                              delay 0.5
-                              click group 1 of group 55 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                        on error
-                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                              delay 0.5
-                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                              delay 0.5
-                              click group 1 of group 27 of group 2 of UI element 1 of scroll area 1 of group 1 of group 1 of window 1
-                        end try
-                  end tell
-            end tell
-
-            '"]]
+            [[:!SOn "osascript ~/scripts/focus-to-do/next.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
