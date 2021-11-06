@@ -12,6 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
   "editor.fontSize": 13,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "Menlo for Powerline",
