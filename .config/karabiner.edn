@@ -136,4 +136,11 @@
       {:des "left ctrl § to swap windows within app" :rules 
             [[:!Tnon_us_backslash :!Cgrave_accent_and_tilde]] 
       } 
+
+      {:des "right control (psysical left win key) hjkl to arrow keys" :rules
+            [[:!Wh :left_arrow]
+            [:!Wj :down_arrow]
+            [:!Wk :up_arrow]
+            [:!Wl :right_arrow]]
+      }
 ]}
