@@ -28,8 +28,14 @@
       ]
 
 } ;; devices
-      
-      :main [
+
+
+:applications {
+      :remote-desktop ["com.microsoft.rdc.macos"]
+}    
+
+
+:main [
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Set PC style keyboard layout
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,14 +78,14 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "shift command spacebar to play_or_pause" :rules 
-          [[:!SCspacebar "osascript ~/scripts/browser-media-control/udemy-youtube-play-pause.scpt"]]
+      {:des "control p to play_or_pause" :rules 
+          [[:!Tp "osascript ~/scripts/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
-      {:des "shift command left to rewind" :rules 
-          [[:!SCleft_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
+      {:des "control left to rewind" :rules 
+          [[:!Tleft_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
-      {:des "shift command right to fast forward" :rules 
-          [[:!SCright_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]]
+      {:des "control right to fast forward" :rules 
+          [[:!Tright_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -91,6 +97,16 @@
       {:des "left_shift left_option n to skip pause in Focus-to-do" :rules 
             [[:!SOn "osascript ~/scripts/focus-to-do/next.scpt"]]
       }
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Remote Desktop
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "make modifier keys work properly on remote desktop"
+            :rules [ 
+            :remote-desktop
+            [:left_command :left_control]
+            [:left_control :left_command]
+      ]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc

@@ -198,12 +198,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "shift command spacebar to play_or_pause",
+        "description" : "control p to play_or_pause",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "spacebar",
+            "key_code" : "p",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -212,12 +212,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "shift command left to rewind",
+        "description" : "control left to rewind",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_arrow",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -226,12 +226,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "shift command right to fast forward",
+        "description" : "control right to fast forward",
         "manipulators" : [ {
           "from" : {
             "key_code" : "right_arrow",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -264,6 +264,33 @@
           },
           "to" : [ {
             "shell_command" : "osascript ~/scripts/focus-to-do/next.scpt"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "make modifier keys work properly on remote desktop",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_control"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.rdc.macos" ]
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.rdc.macos" ]
           } ],
           "type" : "basic"
         } ]
