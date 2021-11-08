@@ -30,12 +30,12 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+pagedown",
+    "key": "ctrl+shift+pagedown",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+pageup",
+    "key": "ctrl+shift+pageup",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
