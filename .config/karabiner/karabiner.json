@@ -362,7 +362,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n            tell application \"System Events\"\n            set _Date to (current date)\n            keystroke (year of _Date as text) & \"-\" & text -2 thru -1 of (\"00\" & ((month of _Date) as integer)) & \"-\" & (day of _Date as text)\n            end tell\n            '"
+            "shell_command" : "osascript -e '\n            set {year:yr, month:mn, day:dy} to (current date)\n            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)\n\n            on pad(v)\n            \treturn text -2 thru -1 of ((v + 100) as text)\n            end pad\n            \n            tell application \"System Events\"\n            keystroke dateString \n            end tell\n            '"
           } ],
           "type" : "basic"
         } ]

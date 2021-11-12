@@ -126,9 +126,15 @@
 
       {:des "left_shift left_option d to print today's date" :rules 
             [[:!SOd "osascript -e '
+            set {year:yr, month:mn, day:dy} to (current date)
+            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
+
+            on pad(v)
+            	return text -2 thru -1 of ((v + 100) as text)
+            end pad
+            
             tell application \"System Events\"
-            set _Date to (current date)
-            keystroke (year of _Date as text) & \"-\" & text -2 thru -1 of (\"00\" & ((month of _Date) as integer)) & \"-\" & (day of _Date as text)
+            keystroke dateString 
             end tell
             '"]]
       }
