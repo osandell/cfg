@@ -10,7 +10,7 @@
     "when": "terminal.active"
   },
   {
-    "key": "cmd+'",
+    "key": "ctrl+'",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
