@@ -144,9 +144,9 @@
       } 
 
       {:des "right control (psysical left win key) hjkl to arrow keys" :rules
-            [[:!Wh :left_arrow]
-            [:!Wj :down_arrow]
-            [:!Wk :up_arrow]
-            [:!Wl :right_arrow]]
+            [[:!W##h :left_arrow]
+            [:!W##j :down_arrow]
+            [:!W##k :up_arrow]
+            [:!W##l :right_arrow]]
       }
 ]}
