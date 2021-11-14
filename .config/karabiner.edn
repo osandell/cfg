@@ -78,14 +78,16 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "control p to play_or_pause" :rules 
+      {:des "left control p to play_or_pause" :rules 
           [[:!Tp "osascript ~/scripts/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
-      {:des "control left to rewind" :rules 
-          [[:!Tleft_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
+      {:des "left control left to rewind" :rules 
+          [[:!Tleft_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]
+          [:!TWh "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
-      {:des "control right to fast forward" :rules 
-          [[:!Tright_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]]
+      {:des "left control right to fast forward" :rules 
+          [[:!Tright_arrow "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]
+          [:!TWl "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

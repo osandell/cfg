@@ -198,7 +198,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "control p to play_or_pause",
+        "description" : "left control p to play_or_pause",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
@@ -212,7 +212,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "control left to rewind",
+        "description" : "left control left to rewind",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_arrow",
@@ -224,14 +224,36 @@
             "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "h",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "right_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"
+          } ],
+          "type" : "basic"
         } ]
       }, {
-        "description" : "control right to fast forward",
+        "description" : "left control right to fast forward",
         "manipulators" : [ {
           "from" : {
             "key_code" : "right_arrow",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "l",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "right_control" ]
             }
           },
           "to" : [ {
