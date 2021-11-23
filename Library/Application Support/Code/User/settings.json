@@ -28,6 +28,7 @@
   "vim.sneak": true,
   "vim.easymotion": true,
   "vim.leader": "<Space>",
+  "vim.useSystemClipboard": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
