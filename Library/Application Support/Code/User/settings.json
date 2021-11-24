@@ -39,6 +39,14 @@
       "after": ["5", "k"]
     },
     {
+      "before": ["d"],
+      "after": ["\"", "0", "d"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "0", "c"]
+    },
+    {
       "before": ["<Leader>", "j"],
       "after": ["J"]
     },
