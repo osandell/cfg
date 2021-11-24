@@ -334,6 +334,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "left control (caps lock) space to end",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "end"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "esc to caps lock",
         "manipulators" : [ {
           "from" : {
