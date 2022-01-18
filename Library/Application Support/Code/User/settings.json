@@ -56,7 +56,15 @@
     },
     {
       "before": ["<Leader>", "c"],
-      "after": ["\"", "0", "c"]
+      "after": ["c"]
+    },
+    {
+      "before": ["p"],
+      "after": ["\"", "0", "p"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "after": ["p"]
     },
     {
       "before": ["<Leader>", "j"],
@@ -130,6 +138,32 @@
           "command": ":nohl"
         }
       ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["d"],
+      "after": ["\"", "0", "d"]
+    },
+    {
+      "before": ["<Leader>", "d"],
+      "after": ["d"]
+    },
+    {
+      "before": ["c"],
+      "after": ["\"", "0", "c"]
+    },
+    {
+      "before": ["<Leader>", "c"],
+      "after": ["c"]
+    },
+    {
+      "before": ["p"],
+      "after": ["\"", "0", "p"]
+    },
+    {
+      "before": ["<Leader>", "p"],
+      "after": ["p"]
     }
   ],
 
