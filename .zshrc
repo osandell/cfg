@@ -115,4 +115,4 @@ export NVM_DIR="$HOME/.nvm"
 export LC_ALL=en_US.UTF-8
 
 # Alias for working with the dotfiles repo. Just use "config" instead of "git"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
