@@ -30,8 +30,7 @@
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
   "vim.handleKeys": {
-    "<C-c>": false,
-    "<C-v>": false
+    "<D-c>": false
   },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
