@@ -22,16 +22,23 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  // Highlight search patterns
   "vim.hlsearch": true,
   "vim.smartRelativeLine": true,
   "vim.gdefault": false,
+
+  // Vim Sneak - invoke with 's'. Takes 2 characters. Finds first instance of them.
   "vim.sneak": true,
+
   "vim.easymotion": true,
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
+
+  // Prevent leaving insert mode when copying text with command-c
   "vim.handleKeys": {
     "<D-c>": false
   },
+
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
@@ -41,14 +48,19 @@
       "before": ["K"],
       "after": ["5", "k"]
     },
+
+    // Copy to the 0 registry instead of default clipboard when pressing d
     {
       "before": ["d"],
       "after": ["\"", "0", "d"]
     },
+
+    // Copy to default clipboard
     {
       "before": ["<Leader>", "d"],
       "after": ["d"]
     },
+
     {
       "before": ["c"],
       "after": ["\"", "0", "c"]
@@ -57,26 +69,37 @@
       "before": ["<Leader>", "c"],
       "after": ["c"]
     },
+
+    // Concatinate lines
     {
       "before": ["<Leader>", "j"],
       "after": ["J"]
     },
+
+    // Go to left window pane
     {
       "before": ["<C-h>"],
       "after": ["<C-w>", "h"]
     },
+
+    // Go to terminal pane
     {
       "before": ["<C-j>"],
       "after": ["<C-w>", "j"]
     },
+
+    // Go up to editor from terminal
     {
       "before": ["<C-k>"],
       "after": ["<C-w>", "k"]
     },
+
+    // Go right to editor from left pane
     {
       "before": ["<C-l>"],
       "after": ["<C-w>", "l"]
     },
+
     {
       "before": ["<Leader>", "t", "t"],
       "commands": [":tabnew"]
@@ -93,10 +116,13 @@
       "before": ["<Leader>", "t", "o"],
       "commands": [":tabo"]
     },
+
+    // Clear last search highlighting
     {
       "before": ["<Leader>", "/"],
       "commands": [":noh"]
     },
+
     {
       "before": ["leader", "w"],
       "commands": ["workbench.action.files.save"]
@@ -113,6 +139,8 @@
       "before": ["<Leader>", "t"],
       "commands": ["workbench.action.gotoSymbol"]
     },
+
+    // New line without going to insert mode
     {
       "before": ["<Leader>", "o"],
       "after": ["o", "<Esc>"]
@@ -121,15 +149,8 @@
       "before": ["<Leader>", "O"],
       "after": ["O", "<Esc>"]
     },
-    {
-      "before": ["<C-n>"],
-      "after": [],
-      "commands": [
-        {
-          "command": ":nohl"
-        }
-      ]
-    },
+
+    // Use u / C-r will be same as ctrl-z / ctrl-y
     {
       "before": ["u"],
       "commands": ["undo"]
@@ -140,14 +161,18 @@
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
+    // Copy to the 0 registry instead of default clipboard when pressing d
     {
       "before": ["d"],
       "after": ["\"", "0", "d"]
     },
+
+    // Copy to default clipboard
     {
       "before": ["<Leader>", "d"],
       "after": ["d"]
     },
+
     {
       "before": ["c"],
       "after": ["\"", "0", "c"]
@@ -156,6 +181,9 @@
       "before": ["<Leader>", "c"],
       "after": ["c"]
     },
+
+    // Copy to the 0 registry when pasting and collect what to paste from the
+    // default clipboard
     {
       "before": ["p"],
       "after": ["\"", "0", "d", "P"]
