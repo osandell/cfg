@@ -29,6 +29,10 @@
   "vim.easymotion": true,
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
+  "vim.handleKeys": {
+    "<C-c>": false,
+    "<C-v>": false
+  },
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["J"],
@@ -43,7 +47,15 @@
       "after": ["\"", "0", "d"]
     },
     {
+      "before": ["<Leader>", "d"],
+      "after": ["d"]
+    },
+    {
       "before": ["c"],
+      "after": ["\"", "0", "c"]
+    },
+    {
+      "before": ["<Leader>", "c"],
       "after": ["\"", "0", "c"]
     },
     {
@@ -120,6 +132,7 @@
       ]
     }
   ],
+
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
