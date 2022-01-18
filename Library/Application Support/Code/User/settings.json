@@ -116,12 +116,8 @@
     },
     {
       "before": ["<Leader>", "o"],
-      "after": ["", "<Esc>"]
+      "after": ["o", "<Esc>"]
     },
-    // {
-    //   "before": ["<Leader>", "o"],
-    //   "after": ["o", "<Esc>"]
-    // },
     {
       "before": ["<Leader>", "O"],
       "after": ["O", "<Esc>"]
@@ -134,6 +130,14 @@
           "command": ":nohl"
         }
       ]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["C-r"],
+      "commands": ["redo"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
