@@ -92,5 +92,17 @@
     "key": "alt+cmd+pageup",
     "command": "-workbench.action.terminal.scrollUp",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "cmd+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "cmd+s",
+    "command": "workbench.action.files.save"
   }
 ]
