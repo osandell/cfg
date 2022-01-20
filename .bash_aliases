@@ -21,3 +21,6 @@ alias gcopb='f() { gco $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\
 
 # Add files for staging based on a search term (git add grep)
 alias gag='f() { git add $(git diff --name-only HEAD~1 | grep $1)};f'
+
+# Open all files modified since last branchout (git open modified)
+alias gom='for i in $(gdfpb); code "$i"'
