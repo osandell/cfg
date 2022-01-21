@@ -116,10 +116,6 @@
   },
   {
     "key": "ctrl+r",
-    "command": "redo"
-  },
-  {
-    "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
   },
   {
@@ -131,9 +127,5 @@
     "key": "ctrl+r",
     "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
     "when": "inQuickOpen && inRecentFilesPicker"
-  },
-  {
-    "key": "ctrl+u",
-    "command": "undo"
   }
 ]
