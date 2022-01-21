@@ -178,9 +178,9 @@
       "after": ["O", "<Esc>"]
     },
 
+    // Console log object on a new line directly under
     {
       "before": ["<Leader>", "l"],
-      // "after": ["y", "i", "w", "o", "<Esc>"],
       "after": ["y", "i", "w", "o"],
       "commands": [
         {
@@ -191,6 +191,11 @@
           "command": "editor.action.clipboardPasteAction"
         }
       ]
+    },
+
+    {
+      "before": ["<Leader>", "G"],
+      "commands": ["editor.action.revealDefinition"]
     },
 
     // Use u / C-r will be same as ctrl-z / ctrl-y
