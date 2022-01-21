@@ -178,6 +178,21 @@
       "after": ["O", "<Esc>"]
     },
 
+    {
+      "before": ["<Leader>", "l"],
+      // "after": ["y", "i", "w", "o", "<Esc>"],
+      "after": ["y", "i", "w", "o"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": { "name": "consoleLogObject" }
+        },
+        {
+          "command": "editor.action.clipboardPasteAction"
+        }
+      ]
+    },
+
     // Use u / C-r will be same as ctrl-z / ctrl-y
     {
       "before": ["u"],
