@@ -148,6 +148,14 @@
       "before": ["<Leader>", "f"],
       "commands": ["workbench.action.findInFiles"]
     },
+    {
+      "before": ["<tab>"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": [":tabprev"]
+    },
 
     // Show source control pane
     {
