@@ -148,9 +148,16 @@
       "before": ["<Leader>", "f"],
       "commands": ["workbench.action.findInFiles"]
     },
+
+    // Show source control pane
     {
       "before": ["<Leader>", "g"],
       "commands": ["workbench.view.scm"]
+    },
+
+    {
+      "before": ["<Leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
     },
 
     // New line without going to insert mode
@@ -206,5 +213,6 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.activityBar.visible": false
 }
