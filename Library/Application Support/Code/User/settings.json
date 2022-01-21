@@ -33,6 +33,7 @@
   "vim.easymotion": true,
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
+  "vim.surround": true,
 
   // Prevent leaving insert mode when copying text with command-c
   "vim.handleKeys": {
@@ -138,6 +139,18 @@
     {
       "before": ["<Leader>", "t"],
       "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<Leader>", "f"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<Leader>", "g"],
+      "commands": ["workbench.view.scm"]
     },
 
     // New line without going to insert mode
