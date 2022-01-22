@@ -178,21 +178,6 @@
       "after": ["O", "<Esc>"]
     },
 
-    // Console log object on a new line directly under
-    {
-      "before": ["<Leader>", "l"],
-      "after": ["y", "i", "w", "o"],
-      "commands": [
-        {
-          "command": "editor.action.insertSnippet",
-          "args": { "name": "consoleLogObject" }
-        },
-        {
-          "command": "editor.action.clipboardPasteAction"
-        }
-      ]
-    },
-
     {
       "before": ["<Leader>", "G"],
       "commands": ["editor.action.revealDefinition"]
