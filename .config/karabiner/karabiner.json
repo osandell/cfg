@@ -207,7 +207,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-play-pause.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-play-pause.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -221,7 +221,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-rewind.scpt"
           } ],
           "type" : "basic"
         }, {
@@ -232,7 +232,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-rewind.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-rewind.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -246,7 +246,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-forward.scpt"
           } ],
           "type" : "basic"
         }, {
@@ -257,7 +257,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/browser-media-control/udemy-youtube-forward.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-forward.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -271,7 +271,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/focus-to-do/pause.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/focus-to-do/pause.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -285,7 +285,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/focus-to-do/next.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/focus-to-do/next.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -299,7 +299,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/scripts/close-notifications/close-notifications.scpt"
+            "shell_command" : "osascript ~/dev/osandell/osx-scripts/close-notifications/close-notifications.scpt"
           } ],
           "type" : "basic"
         } ]
