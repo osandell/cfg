@@ -5,12 +5,12 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Get the names of the files that have been modified since previous commit (git
 # diff previous commit)
-alias gdfp='git diff --name-only HEAD~1'
+alias gdnp='git diff --name-only HEAD~1'
 
 # Get the names of the files that have been modified since last branch out. (git
 # diff parent branch)
 # TODO: Make it so it works without the origin branch being in sync
-alias gdfpb='git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///"))'
+alias gdnpb='git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///"))'
 
 # Check out the commit at last branch out. Takes an argument that will be
 # matched against all filenames of modified files since last branch out. If it
@@ -23,4 +23,7 @@ alias gcopb='f() { gco $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\
 alias gag='f() { git add $(git diff --name-only HEAD~1 | grep $1)};f'
 
 # Open all files modified since last branchout (git open modified)
-alias gom='for i in $(gdfpb); code "$i"'
+alias gom='for i in $(git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///"))); code "$i"'
+
+# Open files modified since last branchout based on a search term (git open modified grep)
+alias gomg='f() {for i in $(git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///")) | grep $1); code "$i"};f'
