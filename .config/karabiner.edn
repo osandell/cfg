@@ -79,32 +79,32 @@
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "left control p to play_or_pause" :rules 
-          [[:!Tp "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-play-pause.scpt"]]
+          [[:!Tp "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
       {:des "left control left to rewind" :rules 
-          [[:!Tleft_arrow "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-rewind.scpt"]
-          [:!TWh "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-rewind.scpt"]]
+          [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
+          [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
       {:des "left control right to fast forward" :rules 
-          [[:!Tright_arrow "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-forward.scpt"]
-          [:!TWl "osascript ~/dev/osandell/osx-scripts/browser-media-control/udemy-youtube-forward.scpt"]]
+          [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
+          [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "left_shift left_option p to play/pause in Focus-to-do" :rules 
-            [[:!SOp "osascript ~/dev/osandell/osx-scripts/focus-to-do/pause.scpt"]]
+            [[:!SOp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]
       }
       {:des "left_shift left_option n to skip pause in Focus-to-do" :rules 
-            [[:!SOn "osascript ~/dev/osandell/osx-scripts/focus-to-do/next.scpt"]]
+            [[:!SOn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "left_shift left_command c to close all notifications" :rules 
-            [[:!SCc "osascript ~/dev/osandell/osx-scripts/close-notifications/close-notifications.scpt"]]
+            [[:!SCc "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]
       }
  
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
