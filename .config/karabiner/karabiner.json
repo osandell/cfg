@@ -290,6 +290,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "left_shift left_command c to close all notifications",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/scripts/close-notifications/close-notifications.scpt"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "make modifier keys work properly on remote desktop",
         "manipulators" : [ {
           "from" : {
