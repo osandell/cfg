@@ -30,6 +30,7 @@
   // Vim Sneak - invoke with 's'. Takes 2 characters. Finds first instance of them.
   "vim.sneak": true,
 
+  "vim.logObject": true,
   "vim.easymotion": true,
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
