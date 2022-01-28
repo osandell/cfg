@@ -14,7 +14,7 @@ alias gdnpb='git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") 
 
 # Check out the commit at last branch out. Takes an argument that will be
 # matched against all filenames of modified files since last branch out. If it
-# finds any matchen then only those specific files will be checked out (they
+# finds any match then only those specific files will be checked out (they
 # will be restored to their state as of last branch out). (git check out parent
 # branch)
 alias gcopb='f() { gco $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///")) -- $(git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///")) | grep $1)};f'
