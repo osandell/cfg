@@ -13,115 +13,204 @@
         "basic.to_if_held_down_threshold_milliseconds" : 500
       },
       "rules" : [ {
-        "description" : "option 0 to option shift 9 (})",
+        "description" : "Function to Left Command",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ]
-            }
+            "key_code" : "fn"
           },
           "to" : [ {
-            "key_code" : "9",
-            "modifiers" : [ "left_option", "left_shift" ]
+            "key_code" : "left_command"
           } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "0",
-            "modifiers" : {
-              "mandatory" : [ "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "9",
-            "modifiers" : [ "left_option", "left_shift" ]
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "option 7 to option shift 8 ({)",
+        "description" : "Left Control to Right Control",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "7",
+            "key_code" : "left_control",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "optional" : [ "any" ]
             }
           },
           "to" : [ {
-            "key_code" : "8",
-            "modifiers" : [ "left_option", "left_shift" ]
+            "key_code" : "right_control"
           } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "7",
-            "modifiers" : {
-              "mandatory" : [ "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "8",
-            "modifiers" : [ "left_option", "left_shift" ]
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "option hyphen to option shift 7 (backslash)",
+        "description" : "Left Command to Function",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "hyphen",
+            "key_code" : "left_command",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "optional" : [ "any" ]
             }
           },
           "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_option", "left_shift" ]
+            "key_code" : "fn"
           } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "hyphen",
-            "modifiers" : {
-              "mandatory" : [ "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_option", "left_shift" ]
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "option grave_accent_and_tilde to option 7 (|)",
+        "description" : "Right Option to Delete",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "grave_accent_and_tilde",
+            "key_code" : "right_option",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "optional" : [ "any" ]
             }
           },
           "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_option" ]
+            "key_code" : "delete_forward"
           } ],
-          "type" : "basic"
-        }, {
-          "from" : {
-            "key_code" : "grave_accent_and_tilde",
-            "modifiers" : {
-              "mandatory" : [ "right_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "7",
-            "modifiers" : [ "left_option" ]
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "left command up arrow to left control up arrow",
+        "description" : "Function + ^ to Page Up",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "fn" ],
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_up"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Function + ' to Page Down",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "backslash",
+            "modifiers" : {
+              "mandatory" : [ "fn" ],
+              "optional" : [ "any" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "page_down"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control to Command",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_control"
+          },
+          "to" : [ {
+            "key_code" : "left_command"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Option to Right Control",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_option"
+          },
+          "to" : [ {
+            "key_code" : "right_control"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command to Left Option",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_option"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Option to Right Command",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "right_option"
+          },
+          "to" : [ {
+            "key_code" : "right_command"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Media key with 3 squares to mission control",
         "manipulators" : [ {
           "from" : {
             "key_code" : "up_arrow",
@@ -133,10 +222,17 @@
             "key_code" : "up_arrow",
             "modifiers" : [ "left_control" ]
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "left option spacebar to left command spacebar",
+        "description" : "Search key to OSX spotlight search",
         "manipulators" : [ {
           "from" : {
             "key_code" : "spacebar",
@@ -148,10 +244,28 @@
             "key_code" : "spacebar",
             "modifiers" : [ "left_command" ]
           } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_command y to left_command left_shift z",
+        "description" : "Right Command to Right Option",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Windows style redo",
         "manipulators" : [ {
           "from" : {
             "key_code" : "y",
@@ -166,7 +280,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left option tab to left command tab",
+        "description" : "Windows style alt-tab app switching",
         "manipulators" : [ {
           "from" : {
             "key_code" : "tab",
@@ -182,7 +296,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left command tab to left option tab",
+        "description" : "Show Launchpad with Command-Tab",
         "manipulators" : [ {
           "from" : {
             "key_code" : "tab",
@@ -198,7 +312,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left control p to play_or_pause",
+        "description" : "Left Control + p to play or pause media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
@@ -212,7 +326,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left control left to rewind",
+        "description" : "Left Control + Left to rewind media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_arrow",
@@ -237,7 +351,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left control right to fast forward",
+        "description" : "Left Control + right to fast forward media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "right_arrow",
@@ -262,7 +376,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_shift left_option p to play/pause in Focus-to-do",
+        "description" : "Left Shift + Left Option + p to play / pause in Focus-to-do",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
@@ -276,7 +390,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_shift left_option n to skip pause in Focus-to-do",
+        "description" : "Left Shift + Left Option + n to skip pause in Focus-to-do",
         "manipulators" : [ {
           "from" : {
             "key_code" : "n",
@@ -290,7 +404,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_shift left_command c to close all notifications",
+        "description" : "Left Shift + Left Command + c to close all notifications",
         "manipulators" : [ {
           "from" : {
             "key_code" : "c",
@@ -304,7 +418,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "make modifier keys work properly on remote desktop",
+        "description" : "Make modifier keys work properly on remote desktop",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_command"
@@ -331,7 +445,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "caps lock to control / alone: esc",
+        "description" : "Caps Lock to Left Control if holding, Esc if pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "key_code" : "escape"
@@ -348,21 +462,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left control (caps lock) space to end",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "end"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "esc to caps lock",
+        "description" : "Esc to Caps Lock",
         "manipulators" : [ {
           "from" : {
             "key_code" : "escape",
@@ -376,7 +476,21 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "move tabs left / right with control shift h / l",
+        "description" : "Left Control + space to go to end of the line",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "end"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Move tabs left / right with Control + Shift + h / l",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
@@ -403,7 +517,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left_shift left_option d to print today's date",
+        "description" : "Left Shift + Left Option + d to print today's date",
         "manipulators" : [ {
           "from" : {
             "key_code" : "d",
@@ -417,7 +531,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left ctrl § to swap windows within app",
+        "description" : "Left Command + < to swap windows within app",
         "manipulators" : [ {
           "from" : {
             "key_code" : "non_us_backslash",
@@ -432,7 +546,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "right control (psysical left win key) hjkl to arrow keys",
+        "description" : "Right Control + h / j / k / l to arrow keys",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
@@ -521,28 +635,7 @@
       },
       "ignore" : false,
       "manipulate_caps_lock_led" : true,
-      "simple_modifications" : [ {
-        "from" : {
-          "apple_vendor_top_case_key_code" : "keyboard_fn"
-        },
-        "to" : [ {
-          "key_code" : "left_command"
-        } ]
-      }, {
-        "from" : {
-          "key_code" : "left_control"
-        },
-        "to" : [ {
-          "apple_vendor_top_case_key_code" : "keyboard_fn"
-        } ]
-      }, {
-        "from" : {
-          "key_code" : "right_option"
-        },
-        "to" : [ {
-          "key_code" : "delete_forward"
-        } ]
-      } ]
+      "simple_modifications" : [ ]
     }, {
       "disable_built_in_keyboard_if_exists" : false,
       "fn_function_keys" : [ ],
@@ -554,21 +647,7 @@
       },
       "ignore" : false,
       "manipulate_caps_lock_led" : true,
-      "simple_modifications" : [ {
-        "from" : {
-          "key_code" : "left_control"
-        },
-        "to" : [ {
-          "key_code" : "left_command"
-        } ]
-      }, {
-        "from" : {
-          "key_code" : "right_option"
-        },
-        "to" : [ {
-          "key_code" : "right_command"
-        } ]
-      } ]
+      "simple_modifications" : [ ]
     }, {
       "disable_built_in_keyboard_if_exists" : false,
       "fn_function_keys" : [ ],
@@ -689,42 +768,21 @@
         "consumer_key_code" : "play_or_pause"
       },
       "to" : [ {
-        "shell_command" : "osascript -e '\n\n         tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell \n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"waterfox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 49 -- spacebar\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+        "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"
       } ]
     }, {
       "from" : {
         "consumer_key_code" : "scan_next_track"
       },
       "to" : [ {
-        "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"waterfox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 124 -- right arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
+        "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"
       } ]
     }, {
       "from" : {
         "consumer_key_code" : "scan_previous_track"
       },
       "to" : [ {
-        "shell_command" : "osascript -e '\n\n            tell application \"System Events\"\n                  set frontmostProcess to first process where it is frontmost\n            end tell\n\n            set foundMediaPlayer to false\n            tell application \"Microsoft Edge\"\n                  set win_List to every window\n                  \n                  set winIndex to 0\n                  repeat with win in win_List\n                        set tab_list to every tab of win\n                        set tabIndex to 1\n                        repeat with t in tab_list\n                              set myUrl to (URL of t as string)\n                              if myUrl contains \"udemy\" then\n                                    tell application \"Microsoft Edge\" to set active tab index of first window to tabIndex\n                                    activate application \"Microsoft Edge\"\n                                    set foundMediaPlayer to true\n                              end if\n                              set tabIndex to tabIndex + 1\n                        end repeat\n                        set winIndex to winIndex + 1\n                  end repeat\n            end tell\n\n            if foundMediaPlayer is false\n            \n                  tell application \"System Events\" to tell process \"waterfox\"\n                        if name of window 1 contains \"YouTube\" then\n                              set frontmost to true\n                        end if\n                  end tell\n            end if\n\n            tell application \"System Events\"\n                  key code 123 -- left arrow\n                  delay 0.1\n                  set frontmost of frontmostProcess to true\n            end tell\n\n            '"
-      } ]
-    }, {
-      "from" : {
-        "key_code" : "left_command"
-      },
-      "to" : [ {
-        "key_code" : "left_option"
-      } ]
-    }, {
-      "from" : {
-        "key_code" : "left_option"
-      },
-      "to" : [ {
-        "key_code" : "right_control"
-      } ]
-    }, {
-      "from" : {
-        "key_code" : "right_command"
-      },
-      "to" : [ {
-        "key_code" : "right_option"
+        "shell_command" : "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"
       } ]
     } ],
     "virtual_hid_keyboard" : {
