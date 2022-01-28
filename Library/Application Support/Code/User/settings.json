@@ -1,7 +1,7 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
   "editor.formatOnSave": true,
-  "files.insertFinalNewline": false,
+  "files.insertFinalNewline": true,
   "editor.renderWhitespace": "all",
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
