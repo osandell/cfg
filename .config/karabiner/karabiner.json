@@ -259,28 +259,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Search key to OSX spotlight search",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_option" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "spacebar",
-            "modifiers" : [ "left_command" ]
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1133,
-              "product_id" : 45913
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Left Control + p to play or pause media",
         "manipulators" : [ {
           "from" : {
@@ -461,6 +439,17 @@
       }, {
         "description" : "Option + space to step to the right",
         "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "right_arrow"
+          } ],
+          "type" : "basic"
+        }, {
           "from" : {
             "key_code" : "spacebar",
             "modifiers" : {
