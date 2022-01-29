@@ -266,10 +266,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "´ to Delete",
+        "description" : "§ to Delete",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "equal_sign"
+            "key_code" : "non_us_backslash"
           },
           "to" : [ {
             "key_code" : "delete_forward"

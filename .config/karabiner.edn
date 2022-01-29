@@ -109,8 +109,8 @@
       }
 
       ; Common bindings for all keyboards
-      {:des "´ to Delete" :rules 
-            [[:equal_sign :delete_forward]]  
+      {:des "§ to Delete" :rules 
+            [[:non_us_backslash :delete_forward]]
       }
 
       {:des "Windows style redo" :rules 
