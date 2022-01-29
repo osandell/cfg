@@ -76,11 +76,7 @@
             [:!F##backslash :page_down]]  
       }
 
-      {:des "´ to Delete" :rules 
-            [:kb-macbook
-            [:equal_sign :delete_or_backspace]]  
-      }
-
+    
       ; Logitech K860
       {:des "Left Control to Command" :rules 
             [:kb-logitech-k860
@@ -113,6 +109,10 @@
       }
 
       ; Common bindings for all keyboards
+      {:des "´ to Delete" :rules 
+            [[:equal_sign :delete_forward]]  
+      }
+
       {:des "Windows style redo" :rules 
             [[:!Cy :!SCz]]  
       }

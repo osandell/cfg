@@ -168,24 +168,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "´ to Delete",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "equal_sign"
-          },
-          "to" : [ {
-            "key_code" : "delete_or_backspace"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1452,
-              "product_id" : 832
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Left Control to Command",
         "manipulators" : [ {
           "from" : {
@@ -280,6 +262,17 @@
               "product_id" : 45913
             } ],
             "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "´ to Delete",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "key_code" : "delete_forward"
           } ],
           "type" : "basic"
         } ]
