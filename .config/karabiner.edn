@@ -37,7 +37,7 @@
 
 :main [
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;; Set PC style keyboard layout
+      ;; Bindings for specific keyboards
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
       ; MacBook Pro internal keyboard
@@ -113,21 +113,6 @@
             [:!Ospacebar :!Cspacebar]]
       }
 
-      ; Common bindings for all keyboards
-      {:des "§ to Delete" :rules 
-            [[:non_us_backslash :delete_forward]]
-      }
-
-      {:des "Windows style redo" :rules 
-            [[:!Cy :!SCz]]  
-      }
-      {:des "Windows style alt-tab app switching" :rules 
-            [[:!O##tab :!Ctab]] 
-      }
-      {:des "Show Launchpad with Command-Tab" :rules 
-            [[:!C##tab :!Otab]] 
-      }
-
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -183,6 +168,26 @@
 
       {:des "Left Control + space to go to end of the line" :rules 
             [[:!Tspacebar :end]]
+      }
+
+      {:des "Option + space to step to the right" :rules 
+            [[:!Espacebar :right_arrow]]
+      }
+
+      {:des "§ to Delete" :rules 
+            [[:non_us_backslash :delete_forward]]
+      }
+
+      {:des "Windows style redo" :rules 
+            [[:!Cy :!SCz]]  
+      }
+      
+      {:des "Windows style alt-tab app switching" :rules 
+            [[:!O##tab :!Ctab]] 
+      }
+
+      {:des "Show Launchpad with Command-Tab" :rules 
+            [[:!C##tab :!Otab]] 
       }
 
       {:des "Move tabs left / right with Control + Shift + h / l" :rules
