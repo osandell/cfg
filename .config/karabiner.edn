@@ -93,6 +93,11 @@
             [:left_command :left_option]] 
       }
 
+      {:des "Right Command to Right Option" :rules
+            [:kb-logitech-k860
+            [:right_command :right_option]]  
+      }
+
       {:des "Right Option to Right Command" :rules
             [:kb-logitech-k860
             [:right_option :right_command]]  
