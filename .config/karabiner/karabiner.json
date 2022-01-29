@@ -16,7 +16,10 @@
         "description" : "Function to Left Command",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "fn"
+            "key_code" : "fn",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "left_command"
@@ -73,7 +76,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "left_command"
+            "key_code" : "left_command",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "left_option"
@@ -91,7 +97,10 @@
         "description" : "Right Command to Right Option",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "right_command"
+            "key_code" : "right_command",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "right_option"
@@ -106,7 +115,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "right_command"
+            "key_code" : "right_command",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "right_option"
@@ -186,7 +198,10 @@
         "description" : "Left Control to Command",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "left_control"
+            "key_code" : "left_control",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "left_command"
@@ -204,7 +219,10 @@
         "description" : "Left Option to Right Control",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "left_option"
+            "key_code" : "left_option",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "right_control"
@@ -222,7 +240,10 @@
         "description" : "Right Option to Right Command",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "right_option"
+            "key_code" : "right_option",
+            "modifiers" : {
+              "optional" : [ "any" ]
+            }
           },
           "to" : [ {
             "key_code" : "right_command"

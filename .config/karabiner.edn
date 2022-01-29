@@ -1,8 +1,8 @@
 
 ;; !  | mandatory - this modifier HAS to be pressed for binding to be valid
 ;; !! | mandatory command + control + optional + shift (hyper)
-;; #  | optional - binding will be valid even if a specified modifier is pressed simultaniously
-;; ## | optional any - binding will be valid even if another modifier is pressed simultaniously
+;; #  | optional - binding will be valid also if a specified modifier is pressed simultaniously
+;; ## | optional any - binding will be valid also if another modifier is pressed simultaniously
 ;; C  | left_command
 ;; T  | left_control
 ;; O  | left_option
@@ -43,7 +43,7 @@
       ; MacBook Pro internal keyboard
       {:des "Function to Left Command" :rules 
             [:kb-macbook
-            [:fn :left_command]]  
+            [:##fn :left_command]]  
       }
 
       {:des "Left Control to Right Control" :rules 
@@ -58,7 +58,7 @@
 
       {:des "Right Command to Right Option" :rules 
             [:kb-macbook
-            [:right_command :right_option]]  
+            [:##right_command :right_option]]  
       }
 
       {:des "Right Option to FN" :rules 
@@ -80,27 +80,27 @@
       ; Logitech K860
       {:des "Left Control to Command" :rules 
             [:kb-logitech-k860
-            [:left_control :left_command]]  
+            [:##left_control :left_command]]  
       }
 
       {:des "Left Option to Right Control" :rules 
             [:kb-logitech-k860
-            [:left_option :right_control]]  
+            [:##left_option :right_control]]  
       }
 
       {:des "Left Command to Left Option" :rules 
             [:kb-logitech-k860
-            [:left_command :left_option]] 
+            [:##left_command :left_option]] 
       }
 
       {:des "Right Command to Right Option" :rules
             [:kb-logitech-k860
-            [:right_command :right_option]]  
+            [:##right_command :right_option]]  
       }
 
       {:des "Right Option to Right Command" :rules
             [:kb-logitech-k860
-            [:right_option :right_command]]  
+            [:##right_option :right_command]]  
       }
 
       {:des "Media key with 3 squares to mission control" :rules 
