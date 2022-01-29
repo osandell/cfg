@@ -19,7 +19,7 @@
 :devices {
       ;; Internal MacBook Pro 16" 2021 keyboard
       :kb-macbook [
-            {:vendor_id 1452,   
+            {:vendor_id 1452,
             :product_id 832 }
       ]
 
@@ -33,7 +33,7 @@
 ;; Make key bindings valid only in specified applications
 :applications {
       :remote-desktop ["com.microsoft.rdc.macos"]
-}    
+}
 
 :main [
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,84 +41,84 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
       ; MacBook Pro internal keyboard
-      {:des "Function to Left Command" :rules 
+      {:des "Function to Left Command" :rules
             [:kb-macbook
-            [:##fn :left_command]]  
+            [:##fn :left_command]]
       }
 
-      {:des "Left Control to Right Control" :rules 
+      {:des "Left Control to Right Control" :rules
             [:kb-macbook
-            [:##left_control :right_control]]  
+            [:##left_control :right_control]]
       }
 
-      {:des "Left Command to Left Option" :rules 
+      {:des "Left Command to Left Option" :rules
             [:kb-macbook
-            [:##left_command :left_option]]  
+            [:##left_command :left_option]]
       }
 
-      {:des "Right Command to Right Option" :rules 
+      {:des "Right Command to Right Option" :rules
             [:kb-macbook
-            [:##right_command :right_option]]  
+            [:##right_command :right_option]]
       }
 
-      {:des "Right Option to FN" :rules 
+      {:des "Right Option to FN" :rules
             [:kb-macbook
-            [:right_option :fn]]  
+            [:right_option :fn]]
       }
 
-      {:des "Function + ^ to Page Up" :rules 
+      {:des "Function + ^ to Page Up" :rules
             [:kb-macbook
-            [:!F##close_bracket :page_up]]  
+            [:!F##close_bracket :page_up]]
       }
 
-      {:des "Function + ' to Page Down" :rules 
+      {:des "Function + ' to Page Down" :rules
             [:kb-macbook
-            [:!F##backslash :page_down]]  
+            [:!F##backslash :page_down]]
       }
 
-    
+
       ; Logitech K860
-      {:des "Left Control to Command" :rules 
+      {:des "Left Control to Command" :rules
             [:kb-logitech-k860
-            [:##left_control :left_command]]  
+            [:##left_control :left_command]]
       }
 
-      {:des "Left Option to Right Control" :rules 
+      {:des "Left Option to Right Control" :rules
             [:kb-logitech-k860
-            [:##left_option :right_control]]  
+            [:##left_option :right_control]]
       }
 
-      {:des "Left Command to Left Option" :rules 
+      {:des "Left Command to Left Option" :rules
             [:kb-logitech-k860
-            [:##left_command :left_option]] 
+            [:##left_command :left_option]]
       }
 
       {:des "Right Command to Right Option" :rules
             [:kb-logitech-k860
-            [:##right_command :right_option]]  
+            [:##right_command :right_option]]
       }
 
       {:des "Right Option to Right Command" :rules
             [:kb-logitech-k860
-            [:##right_option :right_command]]  
+            [:##right_option :right_command]]
       }
 
-      {:des "Media key with 3 squares to mission control" :rules 
+      {:des "Media key with 3 squares to mission control" :rules
             [:kb-logitech-k860
-            [:!Cup_arrow :!Tup_arrow]] 
+            [:!Cup_arrow :!Tup_arrow]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + p to play or pause media" :rules 
+      {:des "Left Control + p to play or pause media" :rules
           [[:!Tp "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
-      {:des "Left Control + Left to rewind media" :rules 
+      {:des "Left Control + Left to rewind media" :rules
           [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
           [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
-      {:des "Left Control + right to fast forward media" :rules 
+      {:des "Left Control + right to fast forward media" :rules
           [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
           [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
       }
@@ -126,25 +126,25 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Option + p to play / pause in Focus-to-do" :rules 
+      {:des "Left Control + Left Option + p to play / pause in Focus-to-do" :rules
             [[:!TOp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]
       }
-      {:des "Left Control + Left Option + n to skip pause in Focus-to-do" :rules 
+      {:des "Left Control + Left Option + n to skip pause in Focus-to-do" :rules
             [[:!TOn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      ;; Notification center 
+      ;; Notification center
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Option + x to close all notifications" :rules 
+      {:des "Left Control + Left Option + x to close all notifications" :rules
             [[:!TOx "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]
       }
- 
+
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Remote Desktop
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Make modifier keys work properly on remote desktop"
-            :rules [ 
+            :rules [
             :remote-desktop
             [:left_command :left_control]
             [:left_control :left_command]
@@ -153,7 +153,11 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Caps Lock to Left Control if holding, Esc if pressed alone" :rules 
+      {:des "< to to Right Control" :rules
+            [[:##grave_accent_and_tilde :right_control]]
+      }
+
+      {:des "Caps Lock to Left Control if holding, Esc if pressed alone" :rules
             [[:##caps_lock :left_control nil {:alone :escape}]]
       }
 
@@ -161,40 +165,40 @@
             [[:##escape :caps_lock]]
       }
 
-      {:des "Left Option + space to go to beginning of the content of the line" :rules 
+      {:des "Left Option + space to go to beginning of the content of the line" :rules
             [[:!Ospacebar :home]]
       }
 
-      {:des "Right Option + space to go to end of the line" :rules 
+      {:des "Right Option + space to go to end of the line" :rules
             [[:!Espacebar :end]]
       }
 
-      {:des "Left Control + space to step to the right" :rules 
+      {:des "Left Control + space to step to the right" :rules
             [[:!Tspacebar :right_arrow]]
       }
 
-      {:des "§ to Delete" :rules 
+      {:des "§ to Delete" :rules
             [[:##non_us_backslash :delete_forward]]
       }
 
-      {:des "Windows style redo" :rules 
+      {:des "Windows style redo" :rules
             [[:!Cy :!SCz]]
       }
-      
-      {:des "Windows style alt-tab app switching" :rules 
-            [[:!O##tab :!Ctab]] 
+
+      {:des "Windows style alt-tab app switching" :rules
+            [[:!O##tab :!Ctab]]
       }
 
-      {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)" :rules 
+      {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)" :rules
             [[:!SOslash :slash]]
       }
 
-      {:des "Make enter unblocked when holding Left Shift + Left Option" :rules 
+      {:des "Make enter unblocked when holding Left Shift + Left Option" :rules
             [[:!SOreturn_or_enter :return_or_enter]]
       }
 
-      {:des "Show Launchpad with Command-Tab" :rules 
-            [[:!C##tab :!Otab]] 
+      {:des "Show Launchpad with Command-Tab" :rules
+            [[:!C##tab :!Otab]]
       }
 
       {:des "Move tabs left / right with Right Control + h / l" :rules
@@ -202,7 +206,7 @@
             [:!Tl :!COright_arrow]]
       }
 
-      {:des "Left Shift + Left Option + d to print today's date" :rules 
+      {:des "Left Shift + Left Option + d to print today's date" :rules
             [[:!SOd "osascript -e '
             set {year:yr, month:mn, day:dy} to (current date)
             set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
@@ -210,16 +214,12 @@
             on pad(v)
             	return text -2 thru -1 of ((v + 100) as text)
             end pad
-            
+
             tell application \"System Events\"
-            keystroke dateString 
+            keystroke dateString
             end tell
             '"]]
       }
-
-      {:des "Left Command + < to swap windows within app" :rules 
-            [[:!Tnon_us_backslash :!Cgrave_accent_and_tilde]] 
-      } 
 
       {:des "Right Control + h / j / k / l to arrow keys" :rules
             [[:!W##h :left_arrow]
@@ -227,6 +227,4 @@
             [:!W##k :up_arrow]
             [:!W##l :right_arrow]]
       }
-
-
 ]}
