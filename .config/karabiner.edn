@@ -182,6 +182,14 @@
             [[:!O##tab :!Ctab]] 
       }
 
+      {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)" :rules 
+            [[:!SOslash :slash]]
+      }
+
+      {:des "Make enter unblocked when holding Left Shift + Left Option" :rules 
+            [[:!SOreturn_or_enter :return_or_enter]]
+      }
+
       {:des "Show Launchpad with Command-Tab" :rules 
             [[:!C##tab :!Otab]] 
       }
@@ -216,4 +224,6 @@
             [:!W##k :up_arrow]
             [:!W##l :right_arrow]]
       }
+
+
 ]}

@@ -27,3 +27,8 @@ alias gom='for i in $(git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\
 
 # Open files modified since last branchout based on a search term (git open modified grep)
 alias gomg='f() {for i in $(git diff --name-only $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git merge-base $(git branch | sed -n -e "s/^\* \(.*\)/\1/p") $(git log --decorate --simplify-by-decoration --oneline | grep -v "(HEAD" | head -n1 | sed "s/.* (\(.*\)) .*/\1/" | sed "s/,.*$//" | sed "s/origin\///")) | grep $1); code "$i"};f'
+
+# Make an alternate version of the most common git aliases for the config repo
+alias cst='config status'
+alias caa='config add -u'
+alias ccmsg='config commit -m'
