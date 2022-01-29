@@ -444,21 +444,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + space to go to end of the line",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "spacebar",
-            "modifiers" : {
-              "mandatory" : [ "left_control" ]
-            }
-          },
-          "to" : [ {
-            "key_code" : "end"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Option + space to step to the right",
+        "description" : "Left Option + space to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
             "key_code" : "spacebar",
@@ -467,14 +453,31 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_arrow"
+            "key_code" : "home"
           } ],
           "type" : "basic"
-        }, {
+        } ]
+      }, {
+        "description" : "Right Option + space to go to end of the line",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "spacebar",
             "modifiers" : {
               "mandatory" : [ "right_option" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "end"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + space to step to the right",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "spacebar",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -572,12 +575,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Move tabs left / right with Control + Shift + h / l",
+        "description" : "Move tabs left / right with Right Control + h / l",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -589,7 +592,7 @@
           "from" : {
             "key_code" : "l",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {

@@ -30,12 +30,12 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+pagedown",
+    "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+pageup",
+    "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
   },
@@ -55,8 +55,24 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+l",
+    "key": "ctrl+shift+e",
     "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.view.debug"
   },
   {
     "key": "cmd+w",
@@ -73,7 +89,7 @@
     "command": "-workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+pagedown",
+    "key": "ctrl+e",
     "command": "workbench.action.terminal.scrollDown",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
@@ -83,7 +99,7 @@
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
   {
-    "key": "ctrl+pageup",
+    "key": "ctrl+y",
     "command": "workbench.action.terminal.scrollUp",
     "when": "terminalFocus && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocus && terminalProcessSupported && !terminalAltBufferActive"
   },
@@ -94,14 +110,6 @@
   },
   {
     "key": "ctrl+s",
-    "command": "workbench.action.files.save"
-  },
-  {
-    "key": "cmd+s",
-    "command": "-workbench.action.files.save"
-  },
-  {
-    "key": "cmd+s",
     "command": "workbench.action.files.save"
   },
   {
