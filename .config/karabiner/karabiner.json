@@ -52,7 +52,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command to Function",
+        "description" : "Left Command to Left Option",
         "manipulators" : [ {
           "from" : {
             "key_code" : "left_command",
@@ -61,7 +61,40 @@
             }
           },
           "to" : [ {
-            "key_code" : "fn"
+            "key_code" : "left_option"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "left_command"
+          },
+          "to" : [ {
+            "key_code" : "left_option"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Command to Right Option",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "right_command"
+          },
+          "to" : [ {
+            "key_code" : "right_option"
           } ],
           "conditions" : [ {
             "identifiers" : [ {
@@ -73,16 +106,13 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option to Delete",
+        "description" : "Right Option to FN",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "right_option",
-            "modifiers" : {
-              "optional" : [ "any" ]
-            }
+            "key_code" : "right_option"
           },
           "to" : [ {
-            "key_code" : "delete_forward"
+            "key_code" : "fn"
           } ],
           "conditions" : [ {
             "identifiers" : [ {
@@ -138,6 +168,24 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "´ to Delete",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "key_code" : "delete_or_backspace"
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1452,
+              "product_id" : 832
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control to Command",
         "manipulators" : [ {
           "from" : {
@@ -163,24 +211,6 @@
           },
           "to" : [ {
             "key_code" : "right_control"
-          } ],
-          "conditions" : [ {
-            "identifiers" : [ {
-              "vendor_id" : 1133,
-              "product_id" : 45913
-            } ],
-            "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Left Command to Left Option",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "left_command"
-          },
-          "to" : [ {
-            "key_code" : "left_option"
           } ],
           "conditions" : [ {
             "identifiers" : [ {
@@ -250,17 +280,6 @@
               "product_id" : 45913
             } ],
             "type" : "device_if"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Command to Right Option",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "right_command"
-          },
-          "to" : [ {
-            "key_code" : "right_option"
           } ],
           "type" : "basic"
         } ]
@@ -376,12 +395,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Option + p to play / pause in Focus-to-do",
+        "description" : "Left Control + Left Option + p to play / pause in Focus-to-do",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control", "left_option" ]
             }
           },
           "to" : [ {
@@ -390,12 +409,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Option + n to skip pause in Focus-to-do",
+        "description" : "Left Control + Left Option + n to skip pause in Focus-to-do",
         "manipulators" : [ {
           "from" : {
             "key_code" : "n",
             "modifiers" : {
-              "mandatory" : [ "left_option", "left_shift" ]
+              "mandatory" : [ "left_control", "left_option" ]
             }
           },
           "to" : [ {
@@ -404,12 +423,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Command + c to close all notifications",
+        "description" : "Left Control + Left Option + x to close all notifications",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "c",
+            "key_code" : "x",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_shift" ]
+              "mandatory" : [ "left_control", "left_option" ]
             }
           },
           "to" : [ {

@@ -51,14 +51,19 @@
             [:##left_control :right_control]]  
       }
 
-      {:des "Left Command to Function" :rules 
+      {:des "Left Command to Left Option" :rules 
             [:kb-macbook
-            [:##left_command :fn]]  
+            [:##left_command :left_option]]  
       }
 
-      {:des "Right Option to Delete" :rules 
+      {:des "Right Command to Right Option" :rules 
             [:kb-macbook
-            [:##right_option :delete_forward]]  
+            [:right_command :right_option]]  
+      }
+
+      {:des "Right Option to FN" :rules 
+            [:kb-macbook
+            [:right_option :fn]]  
       }
 
       {:des "Function + ^ to Page Up" :rules 
@@ -69,6 +74,11 @@
       {:des "Function + ' to Page Down" :rules 
             [:kb-macbook
             [:!F##backslash :page_down]]  
+      }
+
+      {:des "´ to Delete" :rules 
+            [:kb-macbook
+            [:equal_sign :delete_or_backspace]]  
       }
 
       ; Logitech K860
@@ -91,6 +101,7 @@
             [:kb-logitech-k860
             [:right_option :right_command]]  
       }
+
       {:des "Media key with 3 squares to mission control" :rules 
             [:kb-logitech-k860
             [:!Cup_arrow :!Tup_arrow]] 
@@ -102,10 +113,6 @@
       }
 
       ; Common bindings for all keyboards
-      {:des "Right Command to Right Option" :rules 
-            [[:right_command :right_option]]  
-      }
-
       {:des "Windows style redo" :rules 
             [[:!Cy :!SCz]]  
       }
@@ -134,18 +141,18 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Shift + Left Option + p to play / pause in Focus-to-do" :rules 
-            [[:!SOp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]
+      {:des "Left Control + Left Option + p to play / pause in Focus-to-do" :rules 
+            [[:!TOp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]
       }
-      {:des "Left Shift + Left Option + n to skip pause in Focus-to-do" :rules 
-            [[:!SOn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]
+      {:des "Left Control + Left Option + n to skip pause in Focus-to-do" :rules 
+            [[:!TOn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Shift + Left Command + c to close all notifications" :rules 
-            [[:!SCc "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]
+      {:des "Left Control + Left Option + x to close all notifications" :rules 
+            [[:!TOx "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]
       }
  
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
