@@ -75,6 +75,10 @@
     "command": "workbench.view.debug"
   },
   {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
     "key": "cmd+w",
     "command": "workbench.action.closeActiveEditor",
     "when": "editorFocus"
