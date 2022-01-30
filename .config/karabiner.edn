@@ -139,7 +139,7 @@
             :rules [[:!SOreturn_or_enter :return_or_enter]]}
       {:des "Show Launchpad with Command-Tab"
             :rules [[:!C##tab :!Otab]]}
-      {:des "Move tabs left / right with Right Control + h / l"
+      {:des "Move tabs left / right with Left Control + h / l"
             :rules [[:!Th :!COleft_arrow], [:!Tl :!COright_arrow]]}
       {:des "Left Shift + Left Option + d to print today's date" :rules
             [[:!SOd "osascript -e '

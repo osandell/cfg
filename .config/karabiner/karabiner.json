@@ -765,7 +765,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Move tabs left / right with Right Control + h / l",
+        "description" : "Move tabs left / right with Left Control + h / l",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
