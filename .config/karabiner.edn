@@ -164,4 +164,8 @@
             :rules [[:!Ff :!CTf [:!chrome :!edge]]]}
       {:des "Left Control + Left Shift + h / l to move between screens"
             :rules [[:!TSh :!Cleft_arrow] [:!TSl :!Cright_arrow]]}
+      {:des "Bind Option + p to Shift + '+' key in order for ? hotkey to work in Vimium"
+            :rules [[:!Op :!Shyphen] [:!Ep :!Shyphen]]}
+      {:des "Bind ¨ to Shift + '7' key in order for / hotkey to work in Vimium"
+            :rules [[:close_bracket :!S7]]}
 ]}
