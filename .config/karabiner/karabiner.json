@@ -792,6 +792,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Close tab with Left Control + w",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "w",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "w",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Shift + Left Option + d to print today's date",
         "manipulators" : [ {
           "from" : {
