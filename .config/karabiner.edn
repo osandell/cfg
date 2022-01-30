@@ -2,7 +2,8 @@
 ;; !  | mandatory - this modifier HAS to be pressed for binding to be valid
 ;; !! | mandatory command + control + optional + shift (hyper)
 ;; #  | optional - binding will be valid also if a specified modifier is pressed simultaniously
-;; ## | optional any - binding will be valid also if another modifier is pressed simultaniously
+;;    | For example: ':#Ca :b' will bind a to b if a is pressed alone, or if a is pressed together with Command  
+;; ## | optional any - binding will be valid also if any modifier is pressed simultaniously
 ;; C  | left_command
 ;; T  | left_control
 ;; O  | left_option
@@ -106,7 +107,8 @@
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Map the number keys to F1, F2, etc.."
-            :rules [[:1 :f1] [:2 :f2] [:3 :f3] [:4 :f4] [:5 :f5] [:6 :f6] [:7 :f7] [:8 :f8] [:9 :f9] [:0 :f10] [:hyphen :f11] [:equal_sign :f12]]} 
+            :rules [[:#CTWOE1 :f1] [:#CTWOE2 :f2] [:#CTWOE3 :f3] [:#CTWOE4 :f4] [:#CTWOE5 :f5] [:#CTWOE6 :f6] 
+            [:#CTWOE7 :f7] [:#CTWOE8 :f8] [:#CTWOE9 :f9] [:#CTWOE0 :f10] [:#CTWOEhyphen :f11] [:#CTWOEequal_sign :f12]]} 
       {:des "< to to Right Control"
             :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"

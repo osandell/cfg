@@ -416,7 +416,10 @@
         "description" : "Map the number keys to F1, F2, etc..",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "1"
+            "key_code" : "1",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f1"
@@ -424,7 +427,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "2"
+            "key_code" : "2",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f2"
@@ -432,7 +438,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "3"
+            "key_code" : "3",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f3"
@@ -440,7 +449,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "4"
+            "key_code" : "4",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f4"
@@ -448,7 +460,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "5"
+            "key_code" : "5",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f5"
@@ -456,7 +471,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "6"
+            "key_code" : "6",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f6"
@@ -464,7 +482,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "7"
+            "key_code" : "7",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f7"
@@ -472,7 +493,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "8"
+            "key_code" : "8",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f8"
@@ -480,7 +504,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "9"
+            "key_code" : "9",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f9"
@@ -488,7 +515,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "0"
+            "key_code" : "0",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f10"
@@ -496,7 +526,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "hyphen"
+            "key_code" : "hyphen",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f11"
@@ -504,7 +537,10 @@
           "type" : "basic"
         }, {
           "from" : {
-            "key_code" : "equal_sign"
+            "key_code" : "equal_sign",
+            "modifiers" : {
+              "optional" : [ "left_command", "left_control", "left_option", "right_control", "right_option" ]
+            }
           },
           "to" : [ {
             "key_code" : "f12"
