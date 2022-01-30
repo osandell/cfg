@@ -105,6 +105,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Map the number keys to F1, F2, etc.."
+            :rules [[:1 :f1] [:2 :f2] [:3 :f3] [:4 :f4] [:5 :f5] [:6 :f6] [:7 :f7] [:8 :f8] [:9 :f9] [:0 :f10]]} 
       {:des "< to to Right Control"
             :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
@@ -123,7 +125,7 @@
             :rules [[:!Cy :!SCz]]}
       {:des "Windows style alt-tab app switching"
             :rules [[:!O##tab :!Ctab]]}
-      {:des "Windows style alt-tab app switching"
+      {:des "Within app window switching with Function + Tab"
             :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
             :rules [[:!SOslash :slash]]}
@@ -139,7 +141,7 @@
             set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)
 
             on pad(v)
-            	return text -2 thru -1 of ((v + 100) as text)
+                  return text -2 thru -1 of ((v + 100) as text)
             end pad
 
             tell application \"System Events\"

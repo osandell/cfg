@@ -413,6 +413,89 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Map the number keys to F1, F2, etc..",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "1"
+          },
+          "to" : [ {
+            "key_code" : "f1"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "2"
+          },
+          "to" : [ {
+            "key_code" : "f2"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "3"
+          },
+          "to" : [ {
+            "key_code" : "f3"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "4"
+          },
+          "to" : [ {
+            "key_code" : "f4"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "5"
+          },
+          "to" : [ {
+            "key_code" : "f5"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "6"
+          },
+          "to" : [ {
+            "key_code" : "f6"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "7"
+          },
+          "to" : [ {
+            "key_code" : "f7"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "8"
+          },
+          "to" : [ {
+            "key_code" : "f8"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "9"
+          },
+          "to" : [ {
+            "key_code" : "f9"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "0"
+          },
+          "to" : [ {
+            "key_code" : "f10"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "< to to Right Control",
         "manipulators" : [ {
           "from" : {
@@ -543,7 +626,10 @@
             "modifiers" : [ "left_command" ]
           } ],
           "type" : "basic"
-        }, {
+        } ]
+      }, {
+        "description" : "Within app window switching with Function + Tab",
+        "manipulators" : [ {
           "from" : {
             "key_code" : "tab",
             "modifiers" : {
@@ -637,7 +723,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n            set {year:yr, month:mn, day:dy} to (current date)\n            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)\n\n            on pad(v)\n            \treturn text -2 thru -1 of ((v + 100) as text)\n            end pad\n\n            tell application \"System Events\"\n            keystroke dateString\n            end tell\n            '"
+            "shell_command" : "osascript -e '\n            set {year:yr, month:mn, day:dy} to (current date)\n            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)\n\n            on pad(v)\n                  return text -2 thru -1 of ((v + 100) as text)\n            end pad\n\n            tell application \"System Events\"\n            keystroke dateString\n            end tell\n            '"
           } ],
           "type" : "basic"
         } ]
