@@ -237,7 +237,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option to Right Command",
+        "description" : "Right Option to Function",
         "manipulators" : [ {
           "from" : {
             "key_code" : "right_option",
@@ -246,7 +246,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "right_command"
+            "key_code" : "fn"
           } ],
           "conditions" : [ {
             "identifiers" : [ {
