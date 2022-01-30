@@ -123,6 +123,8 @@
             :rules [[:!Cy :!SCz]]}
       {:des "Windows style alt-tab app switching"
             :rules [[:!O##tab :!Ctab]]}
+      {:des "Windows style alt-tab app switching"
+            :rules [[:!Ftab :!SOWtab]]}
       {:des "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)"
             :rules [[:!SOslash :slash]]}
       {:des "Make enter unblocked when holding Left Shift + Left Option"
@@ -148,8 +150,8 @@
 
       {:des "Right Control + h / j / k / l to arrow keys"
             :rules [[:!W##h :left_arrow] [:!W##j :down_arrow] [:!W##k :up_arrow] [:!W##l :right_arrow]]}
-      {:des "Right Option + m to minimize window"
-            :rules [[:!E##m :!Cm]]}
+      {:des "Function + m to minimize window"
+            :rules [[:!Fm :!Cm]]}
       {:des "Function + f to go to fullscreen"
             :rules [[:!Ff :!CTf [:!chrome :!edge]]]}
 ]}

@@ -543,6 +543,18 @@
             "modifiers" : [ "left_command" ]
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "tab",
+            "modifiers" : {
+              "mandatory" : [ "fn" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "tab",
+            "modifiers" : [ "left_option", "left_shift", "right_control" ]
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "Make the - key mapping correctly when holding Left Shift + Left Option (Ukelele didn't work)",
@@ -681,13 +693,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + m to minimize window",
+        "description" : "Function + m to minimize window",
         "manipulators" : [ {
           "from" : {
             "key_code" : "m",
             "modifiers" : {
-              "mandatory" : [ "right_option" ],
-              "optional" : [ "any" ]
+              "mandatory" : [ "fn" ]
             }
           },
           "to" : [ {
