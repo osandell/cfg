@@ -32,6 +32,8 @@
       :remote-desktop ["com.microsoft.rdc.macos"]
 }
 
+:profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
+
 :main [
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Bindings for specific keyboards
@@ -91,10 +93,9 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Shift + p to play / pause in Focus-to-do"
-            :rules [[:!TSp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]}
-      {:des "Left Control + Left Shift + n to skip pause in Focus-to-do"
-            :rules [[:!TSn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]}
+      {:des "Left Control + Left Shift + p to play / pause / skip in Focus-to-do"
+              :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"
+              :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
@@ -112,9 +113,12 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Map the number keys to F1, F2, etc.."
-            :rules [[:#SRCTWOE1 :f1] [:#SRCTWOE2 :f2] [:#SRCTWOE3 :f3] [:#SRCTWOE4 :f4] [:#SRCTWOE5 :f5] [:#SRCTWOE6 :f6]
-            [:#SRCTWOE7 :f7] [:#SRCTWOE8 :f8] [:#SRCTWOE9 :f9] [:#SRCTWOE0 :f10] [:#SRCTWOEhyphen :f11] [:#SRCTWOEequal_sign :f12]]}
+      {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
+            :rules [[:!P1 :f1] [:!O1 :f1] [:!E1 :f1] [:!P2 :f2] [:!O2 :f2] [:!E2 :f2] [:!P3 :f3] [:!O3 :f3] [:!E3 :f3]
+            [:!P4 :f4] [:!O4 :f4] [:!E4 :f4] [:!P5 :f5] [:!O5 :f5] [:!E5 :f5] [:!P6 :f6] [:!O6 :f6] [:!E6 :f6]
+            [:!P7 :f7] [:!O7 :f7] [:!E7 :f7] [:!P8 :f8] [:!O8 :f8] [:!E8 :f8] [:!P9 :f9] [:!O9 :f9] [:!E9 :f9]
+            [:!P0 :f10] [:!O0 :f10] [:!E0 :f10] [:!Phyphen :f11] [:!Ohyphen :f11] [:!Ehyphen :f11]
+            [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Caps Lock"
