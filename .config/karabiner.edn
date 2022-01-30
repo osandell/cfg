@@ -99,8 +99,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Option + x to close all notifications"
-            :rules[[:!TOx "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]}
+      {:des "Left Control + Left Shift + c to close all notifications"
+            :rules[[:!TSc "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Remote Desktop

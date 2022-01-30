@@ -412,12 +412,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Left Option + x to close all notifications",
+        "description" : "Left Control + Left Shift + c to close all notifications",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "x",
+            "key_code" : "c",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_option" ]
+              "mandatory" : [ "left_control", "left_shift" ]
             }
           },
           "to" : [ {
