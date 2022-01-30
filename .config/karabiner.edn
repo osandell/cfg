@@ -91,10 +91,10 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Option + p to play / pause in Focus-to-do"
-            :rules [[:!TOp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]}
-      {:des "Left Control + Left Option + n to skip pause in Focus-to-do"
-            :rules [[:!TOn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]}
+      {:des "Left Control + Left Shift + p to play / pause in Focus-to-do"
+            :rules [[:!TSp "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"]]}
+      {:des "Left Control + Left Shift + n to skip pause in Focus-to-do"
+            :rules [[:!TSn "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
