@@ -74,6 +74,15 @@
       "after": ["c"]
     },
 
+    {
+      "before": ["x"],
+      "after": ["\"", "0", "x"]
+    },
+    {
+      "before": ["<Leader>", "x"],
+      "after": ["x"]
+    },
+
     // Concatinate lines
     {
       "before": ["<Leader>", "j"],
@@ -216,6 +225,15 @@
     {
       "before": ["<Leader>", "c"],
       "after": ["c"]
+    },
+
+    {
+      "before": ["x"],
+      "after": ["\"", "0", "x"]
+    },
+    {
+      "before": ["<Leader>", "x"],
+      "after": ["x"]
     },
 
     // Copy to the 0 registry when pasting and collect what to paste from the

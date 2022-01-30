@@ -106,17 +106,17 @@
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Map the number keys to F1, F2, etc.."
-            :rules [[:1 :f1] [:2 :f2] [:3 :f3] [:4 :f4] [:5 :f5] [:6 :f6] [:7 :f7] [:8 :f8] [:9 :f9] [:0 :f10]]} 
+            :rules [[:1 :f1] [:2 :f2] [:3 :f3] [:4 :f4] [:5 :f5] [:6 :f6] [:7 :f7] [:8 :f8] [:9 :f9] [:0 :f10] [:hyphen :f11] [:equal_sign :f12]]} 
       {:des "< to to Right Control"
             :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
       {:des "Esc to Caps Lock"
             :rules [[:##escape :caps_lock]]}
-      {:des "Left Option + space to go to beginning of the content of the line"
-            :rules [[:!Ospacebar :home]]}
-      {:des "Right Option + space to go to end of the line"
-            :rules [[:!Espacebar :end]]}
+      {:des "Right Control + b to go to beginning of the content of the line"
+            :rules [[:!Wb :home]]}
+      {:des "Right Control + e to go to end of the line"
+            :rules [[:!We :end]]}
       {:des "Left Control + space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
       {:des "§ to Delete"

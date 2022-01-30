@@ -494,6 +494,22 @@
             "key_code" : "f10"
           } ],
           "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "hyphen"
+          },
+          "to" : [ {
+            "key_code" : "f11"
+          } ],
+          "type" : "basic"
+        }, {
+          "from" : {
+            "key_code" : "equal_sign"
+          },
+          "to" : [ {
+            "key_code" : "f12"
+          } ],
+          "type" : "basic"
         } ]
       }, {
         "description" : "< to to Right Control",
@@ -541,12 +557,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Option + space to go to beginning of the content of the line",
+        "description" : "Right Control + b to go to beginning of the content of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "spacebar",
+            "key_code" : "b",
             "modifiers" : {
-              "mandatory" : [ "left_option" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
@@ -555,12 +571,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + space to go to end of the line",
+        "description" : "Right Control + e to go to end of the line",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "spacebar",
+            "key_code" : "e",
             "modifiers" : {
-              "mandatory" : [ "right_option" ]
+              "mandatory" : [ "right_control" ]
             }
           },
           "to" : [ {
