@@ -107,8 +107,8 @@
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Map the number keys to F1, F2, etc.."
-            :rules [[:#CTWOE1 :f1] [:#CTWOE2 :f2] [:#CTWOE3 :f3] [:#CTWOE4 :f4] [:#CTWOE5 :f5] [:#CTWOE6 :f6] 
-            [:#CTWOE7 :f7] [:#CTWOE8 :f8] [:#CTWOE9 :f9] [:#CTWOE0 :f10] [:#CTWOEhyphen :f11] [:#CTWOEequal_sign :f12]]} 
+            :rules [[:#SRCTWOE1 :f1] [:#SRCTWOE2 :f2] [:#SRCTWOE3 :f3] [:#SRCTWOE4 :f4] [:#SRCTWOE5 :f5] [:#SRCTWOE6 :f6] 
+            [:#SRCTWOE7 :f7] [:#SRCTWOE8 :f8] [:#SRCTWOE9 :f9] [:#SRCTWOE0 :f10] [:#SRCTWOEhyphen :f11] [:#SRCTWOEequal_sign :f12]]} 
       {:des "< to to Right Control"
             :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
