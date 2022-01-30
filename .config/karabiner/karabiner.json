@@ -320,6 +320,25 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when\n            Caps Lock is active so that we can use the f11 key in Chrome debug tool.",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f11"
+          },
+          "to" : [ {
+            "key_code" : "d",
+            "modifiers" : [ "left_control", "left_option", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "identifiers" : [ {
+              "vendor_id" : 1133,
+              "product_id" : 45913
+            } ],
+            "type" : "device_if"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Control + p to play or pause media",
         "manipulators" : [ {
           "from" : {

@@ -74,6 +74,9 @@
             :rules[:kb-logitech-k860[:##right_option :right_command]]}
       {:des "Media key with 3 squares to mission control"
             :rules[:kb-logitech-k860[:!Cup_arrow :!Tup_arrow]]}
+      {:des "Show desktop media key (require changing hotkey in mac system settings). Not supposed to work when
+            Caps Lock is active so that we can use the f11 key in Chrome debug tool."
+            :rules[:kb-logitech-k860[:f11 :!TSOd]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
