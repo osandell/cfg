@@ -45,12 +45,12 @@
     "when": "!editorTextFocus"
   },
   {
-    "key": "cmd+n",
+    "key": "ctrl+n",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+n",
+    "key": "cmd+n",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
   },

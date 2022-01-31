@@ -243,6 +243,13 @@
       "after": ["\"", "0", "d", "P"]
     }
   ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // Go to terminal pane
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>", "<C-w>", "j"]
+    }
+  ],
 
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
