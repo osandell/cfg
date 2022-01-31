@@ -461,6 +461,24 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Right Control + r to run last used terminal command",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "right_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.microsoft.VSCode" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed",
         "manipulators" : [ {
           "from" : {

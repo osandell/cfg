@@ -30,6 +30,7 @@
       :chrome ["com.google.Chrome"]
       :edge ["com.microsoft.edgemac"]
       :remote-desktop ["com.microsoft.rdc.macos"]
+      :vscode ["com.microsoft.VSCode"]
 }
 
 :profiles  {:Default {:default true :sim 50 :delay 500 :alone 500 :held 500}}
@@ -110,8 +111,13 @@
       ;; Remote Desktop
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Make modifier keys work properly on remote desktop"
-            :rules [:remote-desktop[:left_command :left_control] [:left_control :left_command]
-      ]}
+            :rules [:remote-desktop[:left_command :left_control] [:left_control :left_command]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; VSCode
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Control + r to run last used terminal command"
+            :rules [:vscode[:!Wr "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
