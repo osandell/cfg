@@ -1064,6 +1064,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "New tab with Left Control + t",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Close tab with Left Control + w",
         "manipulators" : [ {
           "from" : {
@@ -1208,7 +1223,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Bind Option + p to Shift + '+' key in order for ? hotkey to work in Vimium",
+        "description" : "Option + p to Shift + '+' key in order for ? hotkey to work in Vimium",
         "manipulators" : [ {
           "from" : {
             "key_code" : "p",
@@ -1235,7 +1250,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Bind ¨ to Shift + '7' key in order for / hotkey to work in Vimium",
+        "description" : "¨ to Shift + '7' key in order for / hotkey to work in Vimium",
         "manipulators" : [ {
           "from" : {
             "key_code" : "close_bracket"
