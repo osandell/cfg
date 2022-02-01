@@ -104,8 +104,9 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Shift + c to close all notifications"
-            :rules[[:!TSc "osascript ~/dev/osandell/scripts-osx/close-notifications/close-notifications.scpt"]]}
+      {:des "Left Control + Left Shift + n to close all notifications / snooze 1 notification"
+            :rules[[:!TSn nil nil {:alone "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
+            :held "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Remote Desktop
@@ -181,8 +182,8 @@
             :rules [[:!Ff :!CTf [:!chrome :!edge]]]}
       {:des "Left Control + Left Shift + h / l to move between screens"
             :rules [[:!TSh :!Cleft_arrow] [:!TSl :!Cright_arrow]]}
-      {:des "Option + p to Shift + '+' key in order for ? hotkey to work in Vimium"
-            :rules [[:!Op :!Shyphen] [:!Ep :!Shyphen]]}
+      {:des "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium"
+            :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
             :rules [[:close_bracket :!S7]]}
 ]}
