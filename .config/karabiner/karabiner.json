@@ -420,7 +420,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + Left Shift + n to close all notifications / snooze 1 notification",
+        "description" : "Left Control + Left Shift + c to close all notifications / snooze 1 notification",
         "manipulators" : [ {
           "to_if_alone" : [ {
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
@@ -429,7 +429,7 @@
             "shell_command" : "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"
           } ],
           "from" : {
-            "key_code" : "n",
+            "key_code" : "c",
             "modifiers" : {
               "mandatory" : [ "left_control", "left_shift" ]
             }
