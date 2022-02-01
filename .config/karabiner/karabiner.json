@@ -339,10 +339,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + p to play or pause media",
+        "description" : "Left Control + 8 to play or pause media",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "p",
+            "key_code" : "8",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
@@ -1279,6 +1279,21 @@
           "to" : [ {
             "key_code" : "7",
             "modifiers" : [ "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + p to Paste",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "v",
+            "modifiers" : [ "left_command" ]
           } ],
           "type" : "basic"
         } ]

@@ -82,8 +82,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + p to play or pause media" :rules
-          [[:!Tp "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]
+      {:des "Left Control + 8 to play or pause media" :rules
+          [[:!T8 "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]
       }
       {:des "Left Control + Left to rewind media" :rules
           [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
@@ -186,4 +186,6 @@
             :rules [[:!Oopen_bracket :!Shyphen] [:!Eopen_bracket :!Shyphen]]}
       {:des "¨ to Shift + '7' key in order for / hotkey to work in Vimium"
             :rules [[:close_bracket :!S7]]}
+      {:des "Left Control + p to Paste"
+            :rules [[:!Tp :!Cv]]}
 ]}
