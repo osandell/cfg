@@ -122,11 +122,6 @@
   },
   {
     "key": "ctrl+r",
-    "command": "-extension.vim_ctrl+r",
-    "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
-  },
-  {
-    "key": "ctrl+r",
     "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
     "when": "inQuickOpen && inRecentFilesPicker"
   },
