@@ -52,7 +52,7 @@
   {
     "key": "ctrl+k",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "searchViewletVisible s"
+    "when": "searchViewletVisible"
   },
   {
     "key": "ctrl+n",
