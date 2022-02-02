@@ -45,6 +45,16 @@
     "when": "!editorTextFocus"
   },
   {
+    "key": "ctrl+j",
+    "command": "search.action.focusNextSearchResult",
+    "when": "searchViewletVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "searchViewletVisible s"
+  },
+  {
     "key": "ctrl+n",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus"
