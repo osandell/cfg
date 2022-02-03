@@ -58,6 +58,10 @@
       "before": ["d"],
       "after": ["\"", "0", "d"]
     },
+    {
+      "before": ["D"],
+      "after": ["\"", "0", "D"]
+    },
 
     // Copy to default clipboard
     {
