@@ -169,17 +169,25 @@
             end pad
 
             tell application \"System Events\"
-            keystroke dateString
+                  keystroke dateString
             end tell
-            '"]]
-      }
-
+            '"]]}
       {:des "Right Control + h / j / k / l to arrow keys"
             :rules [[:!W##h :left_arrow] [:!W##j :down_arrow] [:!W##k :up_arrow] [:!W##l :right_arrow]]}
       {:des "Function + m to minimize window"
             :rules [[:!Fm :!Cm]]}
       {:des "Function + f to go to fullscreen"
-            :rules [[:!Ff :!CTf [:!chrome :!edge]]]}
+            :rules [[:!Ff "osascript -e '
+            tell application \"System Events\"
+                  tell (first process where it is frontmost)
+                        if value of attribute \"AXFullScreen\" of window 1 = false then
+                              set value of attribute \"AXFullScreen\" of window 1 to true
+                        else
+                              set value of attribute \"AXFullScreen\" of window 1 to false
+                        end if
+                  end tell
+            end tell
+            '"]]}
       {:des "Left Control + Left Shift + h / l to move between screens"
             :rules [[:!TSh :!Cleft_arrow] [:!TSl :!Cright_arrow]]}
       {:des "Option + å to Shift + '+' key in order for ? hotkey to work in Vimium"

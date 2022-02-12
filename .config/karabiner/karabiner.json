@@ -1124,7 +1124,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e '\n            set {year:yr, month:mn, day:dy} to (current date)\n            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)\n\n            on pad(v)\n                  return text -2 thru -1 of ((v + 100) as text)\n            end pad\n\n            tell application \"System Events\"\n            keystroke dateString\n            end tell\n            '"
+            "shell_command" : "osascript -e '\n            set {year:yr, month:mn, day:dy} to (current date)\n            set dateString to (yr as text) & \"-\" & pad(mn as integer) & \"-\" & pad(dy)\n\n            on pad(v)\n                  return text -2 thru -1 of ((v + 100) as text)\n            end pad\n\n            tell application \"System Events\"\n                  keystroke dateString\n            end tell\n            '"
           } ],
           "type" : "basic"
         } ]
@@ -1204,15 +1204,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "f",
-            "modifiers" : [ "left_command", "left_control" ]
-          } ],
-          "conditions" : [ {
-            "type" : "frontmost_application_unless",
-            "bundle_identifiers" : [ "com.google.Chrome" ]
-          }, {
-            "type" : "frontmost_application_unless",
-            "bundle_identifiers" : [ "com.microsoft.edgemac" ]
+            "shell_command" : "osascript -e '\n            tell application \"System Events\"\n                  tell (first process where it is frontmost)\n                        if value of attribute \"AXFullScreen\" of window 1 = false then\n                              set value of attribute \"AXFullScreen\" of window 1 to true\n                        else\n                              set value of attribute \"AXFullScreen\" of window 1 to false\n                        end if\n                  end tell\n            end tell\n            '"
           } ],
           "type" : "basic"
         } ]
