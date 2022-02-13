@@ -207,6 +207,44 @@
     {
       "before": ["C-r"],
       "commands": ["redo"]
+    },
+
+    // Log to console (javascript)
+    {
+      "before": ["<leader>", "L"],
+      "after": ["y", "i", "w", "<Esc>", "o"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "l", "i", "w"],
+      "after": ["y", "i", "w", "<Esc>", "o"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+          }
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "l", "i", "B"],
+      "after": ["y", "i", "B", "<Esc>", "o"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+          }
+        }
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
