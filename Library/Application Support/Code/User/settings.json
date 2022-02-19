@@ -297,5 +297,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.tabCompletion": "on"
+  "editor.tabCompletion": "on",
+  "tabnine.experimentalAutoImports": true
 }
