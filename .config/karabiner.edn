@@ -41,8 +41,6 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
       ; MacBook Pro internal keyboard
-      {:des "< to to Right Control"
-            :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Function to Left Command"
             :rules [:kb-macbook [:##fn :left_command]]}
       {:des "Left Control to Function"
@@ -61,8 +59,6 @@
             :rules[:kb-macbook[:!F##backslash :page_down]]}
 
       ; Logitech K860
-      {:des "< to to Right Control"
-            :rules [[:##grave_accent_and_tilde :right_control]]}
       {:des "Left Control to Command"
             :rules[:kb-logitech-k860[:##left_control :left_command]]}
       {:des "Left Option to Function"
@@ -82,16 +78,13 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Media Control
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + 8 to play or pause media" :rules
-          [[:!T8 "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]
-      }
       {:des "Left Control + Left to rewind media" :rules
-          [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
-          [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
+            [[:!Tleft_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]
+            [:!TWh "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-rewind.scpt"]]
       }
       {:des "Left Control + right to fast forward media" :rules
-          [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
-          [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
+            [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
+            [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
       }
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -123,6 +116,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "< to to Right Control if holding, to play or pause media pressed alone"
+            :rules [[:##grave_accent_and_tilde :right_control nil {:alone "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"}]]}
       {:des "Map the number keys to F1, F2, etc.. when Caps Lock is active or Option is pressed"
             :rules [[:!P1 :f1] [:!O1 :f1] [:!E1 :f1] [:!P2 :f2] [:!O2 :f2] [:!E2 :f2] [:!P3 :f3] [:!O3 :f3] [:!E3 :f3]
             [:!P4 :f4] [:!O4 :f4] [:!E4 :f4] [:!P5 :f5] [:!O5 :f5] [:!E5 :f5] [:!P6 :f6] [:!O6 :f6] [:!E6 :f6]
