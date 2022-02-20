@@ -245,6 +245,18 @@
           }
         }
       ]
+    },
+    {
+      "before": ["<leader>", "l", "l"],
+      "after": ["0", "w", "y", "t", ";", "<Esc>", "o"],
+      "commands": [
+        {
+          "command": "editor.action.insertSnippet",
+          "args": {
+            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+          }
+        }
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
