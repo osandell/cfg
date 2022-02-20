@@ -49,12 +49,12 @@
     "when": "!editorTextFocus"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+shift+j",
     "command": "search.action.focusNextSearchResult",
     "when": "searchViewletVisible"
   },
   {
-    "key": "ctrl+k",
+    "key": "ctrl+shift+k",
     "command": "search.action.focusPreviousSearchResult",
     "when": "searchViewletVisible"
   },
