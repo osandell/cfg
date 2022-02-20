@@ -134,7 +134,11 @@
             :rules [[:!Wb :home]]}
       {:des "Right Control + e to go to end of the line"
             :rules [[:!We :end]]}
-      {:des "Left Control + space to step to the right"
+      {:des "left Control + d to cut"
+            :rules [[:!Td :!Cx]]}
+      {:des "left Control + y to copy"
+            :rules [[:!Ty :!Cc]]}
+      {:des "left Control + space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
       {:des "§ to Delete"
             :rules [[:##non_us_backslash :delete_forward]]}

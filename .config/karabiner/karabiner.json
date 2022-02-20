@@ -945,7 +945,37 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + space to step to the right",
+        "description" : "left Control + d to cut",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "x",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left Control + y to copy",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "y",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "left Control + space to step to the right",
         "manipulators" : [ {
           "from" : {
             "key_code" : "spacebar",
