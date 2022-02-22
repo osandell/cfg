@@ -217,7 +217,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+            "snippet": "console.log('%c$CLIPBOARD\\n\\n', 'color: white; padding: 0 10px; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -229,7 +229,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+            "snippet": "console.log('%c$CLIPBOARD\\n\\n', 'color: white; padding: 0 10px; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -241,7 +241,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+            "snippet": "console.log('%c$CLIPBOARD\\n\\n', 'color: white; padding: 0 10px; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -253,7 +253,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log('$CLIPBOARD', $CLIPBOARD);"
+            "snippet": "console.log('%c$CLIPBOARD\\n\\n', 'color: white; padding: 0 10px; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
