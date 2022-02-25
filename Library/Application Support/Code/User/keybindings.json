@@ -51,12 +51,12 @@
   {
     "key": "ctrl+shift+j",
     "command": "search.action.focusNextSearchResult",
-    "when": "searchViewletVisible && !terminal.active"
+    "when": "searchViewletVisible && !terminalFocus"
   },
   {
     "key": "ctrl+shift+k",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "searchViewletVisible && !terminal.active"
+    "when": "searchViewletVisible && !terminalFocus"
   },
   {
     "key": "ctrl+n",
