@@ -36,12 +36,12 @@
   {
     "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus"
+    "when": "terminalFocus && !terminal.active"
   },
   {
     "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus"
+    "when": "terminalFocus && !terminal.active"
   },
   {
     "key": "ctrl+j",
