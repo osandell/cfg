@@ -36,12 +36,12 @@
   {
     "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
-    "when": "terminalFocus && !terminal.active"
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+shift+k",
     "command": "workbench.action.terminal.focusPrevious",
-    "when": "terminalFocus && !terminal.active"
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+j",
@@ -51,12 +51,12 @@
   {
     "key": "ctrl+shift+j",
     "command": "search.action.focusNextSearchResult",
-    "when": "searchViewletVisible"
+    "when": "searchViewletVisible && !terminal.active"
   },
   {
     "key": "ctrl+shift+k",
     "command": "search.action.focusPreviousSearchResult",
-    "when": "searchViewletVisible"
+    "when": "searchViewletVisible && !terminal.active"
   },
   {
     "key": "ctrl+n",
