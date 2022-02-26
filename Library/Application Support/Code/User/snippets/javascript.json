@@ -12,9 +12,19 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-  "Print to console": {
-    "prefix": "logtest",
-    "body": ["console.log('$1');", "$2"],
+  "Console Log": {
+    "prefix": "log",
+    "body": [
+      "console.log('\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$1\\x1b[8m\\x1b[40m    \\x1b[0m\\n\\n', 'color: white; background: black; font-weight: bold');",
+      "$2"
+    ],
     "description": "Log output to console"
+  },
+  "Console Log Object": {
+    "prefix": "clo",
+    "body": [
+      "console.log('\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c${1:first}\\x1b[8m\\x1b[40m    \\x1b[0m\\n\\n', 'color: white; background: black; font-weight: bold', ${1:first})"
+    ],
+    "description": "Logs property with name."
   }
 }
