@@ -217,7 +217,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -229,7 +229,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -241,7 +241,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
@@ -253,7 +253,7 @@
         {
           "command": "editor.action.insertSnippet",
           "args": {
-            "snippet": "console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
+            "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m    \\x1b[0m\\x1b[7m%c$CLIPBOARD\\x1b[8m\\x1b[40m    \\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
         }
       ]
