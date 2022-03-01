@@ -140,6 +140,8 @@
             :rules [[:!Td :!Cx]]}
       {:des "left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
+      {:des "left Control + z to undo"
+            :rules [[:!Tz :!Cz]]}
       {:des "left Control + space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
       {:des "§ to Delete"

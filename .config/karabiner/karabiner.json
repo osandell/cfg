@@ -1002,6 +1002,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "left Control + z to undo",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "z",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "z",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "left Control + space to step to the right",
         "manipulators" : [ {
           "from" : {
