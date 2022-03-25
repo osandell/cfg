@@ -443,6 +443,90 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Shift + Left Control + s to activate Slack",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "s",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Control + v to activate VSCode",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Visual Studio Code\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Control + f to activate Fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Control + t to activate iTerm",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Control + g to activate Google Chrome Grebban",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "g",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Shift + Left Control + d to activate Google Chrome Dev",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "< to Right Control if holding, to play or pause media pressed alone",
         "manipulators" : [ {
           "to_if_alone" : [ {

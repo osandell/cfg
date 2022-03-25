@@ -114,6 +114,27 @@
             :rules [:vscode[:!Wr "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Application switching
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Shift + Left Control + s to activate Slack"
+            :rules [[:!TSs "osascript -e 'tell application \"Slack\" to activate'"]]}
+
+      {:des "Left Shift + Left Control + v to activate VSCode"
+            :rules [[:!TSv "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
+
+      {:des "Left Shift + Left Control + f to activate Fork"
+            :rules [[:!TSf "osascript -e 'tell application \"Fork\" to activate'"]]}
+
+      {:des "Left Shift + Left Control + t to activate iTerm"
+            :rules [[:!TSt "osascript -e 'tell application \"iTerm\" to activate'"]]}
+
+      {:des "Left Shift + Left Control + g to activate Google Chrome Grebban"
+            :rules [[:!TSg "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
+
+      {:des "Left Shift + Left Control + d to activate Google Chrome Dev"
+            :rules [[:!TSd "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "< to Right Control if holding, to play or pause media pressed alone"
