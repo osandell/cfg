@@ -69,19 +69,19 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "ctrl+shift+e",
+    "key": "shift+alt+e",
     "command": "workbench.action.focusActiveEditorGroup"
   },
   {
-    "key": "ctrl+shift+x",
+    "key": "shift+alt+x",
     "command": "workbench.view.explorer"
   },
   {
-    "key": "ctrl+shift+f",
+    "key": "shift+alt+f",
     "command": "workbench.action.findInFiles"
   },
   {
-    "key": "ctrl+shift+g",
+    "key": "shift+alt+g",
     "command": "workbench.view.scm"
   },
   {
@@ -185,5 +185,15 @@
     "key": "alt+z",
     "command": "-workbench.action.terminal.sizeToContentWidth",
     "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen || terminalFocus && terminalIsOpen && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
   }
 ]
