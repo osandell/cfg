@@ -30,6 +30,7 @@
       :chrome ["com.google.Chrome"]
       :edge ["com.microsoft.edgemac"]
       :remote-desktop ["com.microsoft.rdc.macos"]
+      :slack ["com.tinyspeck.slackmacgap"]
       :vscode ["com.microsoft.VSCode"]
 }
 
@@ -108,11 +109,48 @@
             :rules [:remote-desktop[:left_command :left_control] [:left_control :left_command]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Google Chrome
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Option + Right Shift + t to open Toggle tab"
+            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggle.scpt"]]}
+
+      {:des "Right Option + Right Shift + n to open Notion tab"
+            :rules [:chrome[:!ERn "osascript ~/dev/osandell/scripts-osx/chrome/notion.scpt"]]}
+
+      {:des "Right Option + Right Shift + j to open Jira tab"
+            :rules [:chrome[:!ERj "osascript ~/dev/osandell/scripts-osx/chrome/jira.scpt"]]}
+
+      {:des "Right Option + Right Shift + b to open Bitbucket tab"
+            :rules [:chrome[:!ERb "osascript ~/dev/osandell/scripts-osx/chrome/bitbucket.scpt"]]}
+
+      {:des "Right Option + Right Shift + a to open Azure tab"
+            :rules [:chrome[:!ERa "osascript ~/dev/osandell/scripts-osx/chrome/azure.scpt"]]}
+
+      {:des "Right Option + Right Shift + c to open calendar tab"
+            :rules [:chrome[:!ERc "osascript ~/dev/osandell/scripts-osx/chrome/calendar.scpt"]]}
+
+      {:des "Right Option + Right Shift + m to open mail tab"
+            :rules [:chrome[:!ERm "osascript ~/dev/osandell/scripts-osx/chrome/mail.scpt"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      ;; Slack
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Right Option + Right Shift + g to open Grebban workspace"
+            :rules [:slack[:!ERg :!C1]]}
+
+      {:des "Right Option + Right Shift + r to open Royal workspace"
+            :rules [:slack[:!ERr :!C2]]}
+
+      {:des "Right Option + Right Shift + f to find thread"
+            :rules [:slack[:!ERf :!Ck]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + r to run last used terminal command"
             :rules [:vscode[:!Wr "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"]]}
 
+    
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
