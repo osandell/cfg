@@ -33,3 +33,6 @@ alias cgst='config status'
 alias cgaa='config add -u'
 alias cgcmsg='config commit -m'
 alias cgp='config push'
+
+# Same as alias gclean but without interactive
+alias gclean!='git clean -f -d'
