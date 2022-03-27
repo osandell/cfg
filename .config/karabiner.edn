@@ -155,22 +155,22 @@
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Shift + Left Control + s to activate Slack"
-            :rules [[:!TRs "osascript -e 'tell application \"Slack\" to activate'"]]}
+            :rules [[:!TRs "osascript ~/dev/osandell/scripts-osx/switch-application/slack.scpt"]]}
 
       {:des "Right Shift + Left Control + v to activate VSCode"
-            :rules [[:!TRv "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
+            :rules [[:!TRv "osascript ~/dev/osandell/scripts-osx/switch-application/vscode.scpt"]]}
 
       {:des "Right Shift + Left Control + t to activate iTerm"
-            :rules [[:!TRt "osascript -e 'tell application \"iTerm\" to activate'"]]}
+            :rules [[:!TRt "osascript ~/dev/osandell/scripts-osx/switch-application/iterm.scpt"]]}
 
       {:des "Right Shift + Left Control + g to activate Google Chrome Grebban"
-            :rules [[:!TRg "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
+            :rules [[:!TRg "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-grebban.scpt"]]}
 
       {:des "Right Shift + Left Control + d to activate Google Chrome Dev"
-            :rules [[:!TRd "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
+            :rules [[:!TRd "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-dev.scpt"]]}
 
       {:des "Right Shift + Left Control + p to activate Google Chrome Private"
-            :rules [[:!TRp "osascript -e 'tell application \"Google Chrome Private\" to activate'"]]}
+            :rules [[:!TRp "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-private.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc

@@ -635,7 +635,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/slack.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -649,7 +649,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Visual Studio Code\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/vscode.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -663,7 +663,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/iterm.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -677,7 +677,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-grebban.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -691,7 +691,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-dev.scpt"
           } ],
           "type" : "basic"
         } ]
@@ -705,7 +705,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Private\" to activate'"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/switch-application/chrome-private.scpt"
           } ],
           "type" : "basic"
         } ]
