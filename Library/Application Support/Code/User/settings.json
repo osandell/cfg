@@ -68,6 +68,10 @@
       "before": ["<Leader>", "d"],
       "after": ["d"]
     },
+    {
+      "before": ["<Leader>", "D"],
+      "after": ["D"]
+    },
 
     {
       "before": ["c"],
