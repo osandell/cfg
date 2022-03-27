@@ -626,12 +626,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + s to activate Slack",
+        "description" : "Right Shift + Left Control + s to activate Slack",
         "manipulators" : [ {
           "from" : {
             "key_code" : "s",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control", "right_shift" ]
             }
           },
           "to" : [ {
@@ -640,12 +640,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + v to activate VSCode",
+        "description" : "Right Shift + Left Control + v to activate VSCode",
         "manipulators" : [ {
           "from" : {
             "key_code" : "v",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control", "right_shift" ]
             }
           },
           "to" : [ {
@@ -654,12 +654,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + t to activate iTerm",
+        "description" : "Right Shift + Left Control + t to activate iTerm",
         "manipulators" : [ {
           "from" : {
             "key_code" : "t",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control", "right_shift" ]
             }
           },
           "to" : [ {
@@ -668,12 +668,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + g to activate Google Chrome Grebban",
+        "description" : "Right Shift + Left Control + g to activate Google Chrome Grebban",
         "manipulators" : [ {
           "from" : {
             "key_code" : "g",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control", "right_shift" ]
             }
           },
           "to" : [ {
@@ -682,16 +682,30 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + d to activate Google Chrome Dev",
+        "description" : "Right Shift + Left Control + d to activate Google Chrome Dev",
         "manipulators" : [ {
           "from" : {
             "key_code" : "d",
             "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
+              "mandatory" : [ "left_control", "right_shift" ]
             }
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Left Control + p to activate Google Chrome Private",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "p",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Private\" to activate'"
           } ],
           "type" : "basic"
         } ]
