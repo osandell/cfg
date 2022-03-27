@@ -310,5 +310,6 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabCompletion": "on",
-  "tabnine.experimentalAutoImports": true
+  "tabnine.experimentalAutoImports": true,
+  "git-graph.repository.commits.fetchAvatars": true
 }

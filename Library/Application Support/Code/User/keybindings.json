@@ -81,7 +81,7 @@
     "command": "workbench.action.findInFiles"
   },
   {
-    "key": "shift+alt+g",
+    "key": "shift+alt+s",
     "command": "workbench.view.scm"
   },
   {
@@ -195,5 +195,9 @@
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+alt+g",
+    "command": "git-graph.view"
   }
 ]
