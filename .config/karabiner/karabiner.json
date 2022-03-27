@@ -654,20 +654,6 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Shift + Left Control + f to activate Fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "left_control", "left_shift" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
         "description" : "Left Shift + Left Control + t to activate iTerm",
         "manipulators" : [ {
           "from" : {

@@ -160,9 +160,6 @@
       {:des "Left Shift + Left Control + v to activate VSCode"
             :rules [[:!TSv "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
 
-      {:des "Left Shift + Left Control + f to activate Fork"
-            :rules [[:!TSf "osascript -e 'tell application \"Fork\" to activate'"]]}
-
       {:des "Left Shift + Left Control + t to activate iTerm"
             :rules [[:!TSt "osascript -e 'tell application \"iTerm\" to activate'"]]}
 
