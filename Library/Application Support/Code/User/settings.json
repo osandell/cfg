@@ -315,5 +315,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabCompletion": "on",
   "tabnine.experimentalAutoImports": true,
-  "git-graph.repository.commits.fetchAvatars": true
+  "git-graph.repository.commits.fetchAvatars": true,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }
