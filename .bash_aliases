@@ -34,6 +34,7 @@ alias cgaa='config add -u'
 alias cgcmsg='config commit -m'
 alias cgp='config push'
 alias cgpf!='config push --force'
+alias cgcan!='config commit -v -a --no-edit --amend'
 
 # Same as alias gclean but without interactive
 alias gclean!='git clean -f -d'
