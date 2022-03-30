@@ -36,6 +36,7 @@ alias cgp='config push'
 alias cgpf!='config push --force'
 alias cgcan!='config commit -v -a --no-edit --amend'
 alias cgapa='config add --patch'
+alias cgloga='config log --oneline --decorate --graph --all'
 
 # Same as alias gclean but without interactive
 alias gclean!='git clean -f -d'
