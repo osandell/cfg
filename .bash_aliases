@@ -36,3 +36,6 @@ alias cgp='config push'
 
 # Same as alias gclean but without interactive
 alias gclean!='git clean -f -d'
+
+# Remove all content except .git and then make a hard reset
+alias gcleanreset!='git rm -rf . && git clean -fxd && git reset --hard && yarn'
