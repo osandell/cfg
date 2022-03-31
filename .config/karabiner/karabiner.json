@@ -425,7 +425,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Option + Right Shift + t to open Toggle tab",
+        "description" : "Right Option + Right Shift + t to open Toggl tab",
         "manipulators" : [ {
           "from" : {
             "key_code" : "t",
@@ -434,7 +434,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/toggle.scpt"
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"
           } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",

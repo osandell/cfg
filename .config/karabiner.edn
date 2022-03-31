@@ -111,8 +111,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Right Option + Right Shift + t to open Toggle tab"
-            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggle.scpt"]]}
+      {:des "Right Option + Right Shift + t to open Toggl tab"
+            :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"]]}
 
       {:des "Right Option + Right Shift + n to open Notion tab"
             :rules [:chrome[:!ERn "osascript ~/dev/osandell/scripts-osx/chrome/notion.scpt"]]}
