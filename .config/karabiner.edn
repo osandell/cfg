@@ -111,6 +111,9 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+      {:des "Left Control + d to duplicate tab"
+            :rules [:chrome[:!Td "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
+            
       {:des "Right Option + Right Shift + t to open Toggl tab"
             :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"]]}
 

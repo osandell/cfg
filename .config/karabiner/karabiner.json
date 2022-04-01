@@ -425,6 +425,24 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + d to duplicate tab",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "d",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Option + Right Shift + t to open Toggl tab",
         "manipulators" : [ {
           "from" : {
