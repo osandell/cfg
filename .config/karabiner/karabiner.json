@@ -719,7 +719,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Left Control + d to activate Google Chrome Dev",
+        "description" : "Right Shift + Left Control + d to activate original Google Chrome (d as in development)",
         "manipulators" : [ {
           "from" : {
             "key_code" : "d",
@@ -728,7 +728,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Google Chrome\" to activate'"
           } ],
           "type" : "basic"
         } ]

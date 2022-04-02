@@ -172,8 +172,8 @@
       {:des "Right Shift + Left Control + g to activate Google Chrome Grebban"
             :rules [[:!TRg "osascript -e 'tell application \"Google Chrome Grebban\" to activate'"]]}
 
-      {:des "Right Shift + Left Control + d to activate Google Chrome Dev"
-            :rules [[:!TRd "osascript -e 'tell application \"Google Chrome Dev\" to activate'"]]}
+      {:des "Right Shift + Left Control + d to activate original Google Chrome (d as in development)"
+            :rules [[:!TRd "osascript -e 'tell application \"Google Chrome\" to activate'"]]}
 
       {:des "Right Shift + Left Control + p to activate Google Chrome Private"
             :rules [[:!TRp "osascript -e 'tell application \"Google Chrome Private\" to activate'"]]}
