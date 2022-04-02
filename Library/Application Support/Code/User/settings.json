@@ -15,9 +15,8 @@
   "explorer.compactFolders": false,
   "editor.fontFamily": "Powerline Consolas",
   "editor.fontSize": 15,
-  "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.fontFamily": "Powerline Consolas",
   "terminal.integrated.fontSize": 15,
+  "terminal.integrated.minimumContrastRatio": 1,
 
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Default Light+",
