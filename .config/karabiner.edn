@@ -114,6 +114,9 @@
       {:des "Left Control + d to duplicate tab"
             :rules [:chrome[:!Td "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
             
+      {:des "Left Control + e to mark text (only useful in Notion)"
+            :rules [:chrome[:!Te :!Ce]]}
+            
       {:des "Right Option + Right Shift + t to open Toggl tab"
             :rules [:chrome[:!ERt "osascript ~/dev/osandell/scripts-osx/chrome/toggl.scpt"]]}
 
