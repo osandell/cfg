@@ -462,6 +462,25 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + r to hard reload",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "r",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "r",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Option + Right Shift + t to open Toggl tab",
         "manipulators" : [ {
           "from" : {
