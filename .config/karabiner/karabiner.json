@@ -1689,6 +1689,20 @@
           } ],
           "type" : "basic"
         } ]
+      }, {
+        "description" : "Left Control + Left Shift + m to swap mapping Middle Mouse Button to Minimize Window",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_control", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"
+          } ],
+          "type" : "basic"
+        } ]
       } ]
     },
     "devices" : [ {
