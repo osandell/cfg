@@ -666,15 +666,18 @@
       }, {
         "description" : "Right Control + r to run last used terminal command",
         "manipulators" : [ {
+          "to_if_alone" : [ {
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
+          } ],
+          "to_if_held_down" : [ {
+            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"
+          } ],
           "from" : {
             "key_code" : "r",
             "modifiers" : {
               "mandatory" : [ "right_control" ]
             }
           },
-          "to" : [ {
-            "shell_command" : "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"
-          } ],
           "conditions" : [ {
             "type" : "frontmost_application_if",
             "bundle_identifiers" : [ "com.microsoft.VSCode" ]
@@ -1686,6 +1689,20 @@
           "to" : [ {
             "key_code" : "v",
             "modifiers" : [ "left_command" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e '\n            tell application \"System Events\"\n                  click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)\n            end tell\n            '"
           } ],
           "type" : "basic"
         } ]

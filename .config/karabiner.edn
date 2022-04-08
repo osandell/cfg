@@ -157,9 +157,9 @@
       ;; VSCode
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       {:des "Right Control + r to run last used terminal command"
-            :rules [:vscode[:!Wr "osascript ~/dev/osandell/scripts-osx/vscode/run-last-command.scpt"]]}
+            :rules [:vscode[:!Wr nil nil {:alone "osascript ~/dev/osandell/scripts-osx/vscode/rerun-last-command.scpt"
+            :held "osascript ~/dev/osandell/scripts-osx/vscode/rerun-second-last-command.scpt"}]]}
 
-    
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Application switching
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -269,6 +269,12 @@
             :rules [[:close_bracket :!S7]]}
       {:des "Left Control + p to Paste"
             :rules [[:!Tp :!Cv]]}
+      {:des "Left Command + m to click minimize button (fix: normal hotkey doesn't work with every app, for example VSCode)"
+            :rules [[:!Cm "osascript -e '
+            tell application \"System Events\"
+                  click (first button whose subrole is \"AXMinimizeButton\") of (first window whose subrole is \"AXStandardWindow\") of (first process whose frontmost is true)
+            end tell
+            '"]]}
       {:des "Left Control + Left Shift + m to swap mapping Middle Mouse Button to Minimize Window"
             :rules [[:!TSm "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"]]}
 ]}
