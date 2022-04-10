@@ -222,5 +222,20 @@
     "key": "alt+h",
     "command": "-gitlens.showQuickFileHistory",
     "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "ctrl+shift+[Backslash]",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+[Backslash]",
+    "command": "rewrap.rewrapComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "-rewrap.rewrapComment",
+    "when": "editorTextFocus"
   }
 ]
