@@ -118,3 +118,11 @@ export LC_ALL=en_US.UTF-8
 source $HOME/.bash_aliases
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Python
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+alias python="$(pyenv which python)"
+alias pip="$(pyenv which pip)"
