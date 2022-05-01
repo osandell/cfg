@@ -224,13 +224,16 @@
     // Log to console (javascript)
     {
       "before": ["<leader>", "L"],
-      "after": ["y", "i", "w", "<Esc>", "o"],
+      "after": ["y", "i", "w", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
           "args": {
             "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
+        },
+        {
+          "command": "workbench.action.files.save"
         }
       ]
     },
