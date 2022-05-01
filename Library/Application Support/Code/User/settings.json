@@ -23,17 +23,18 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   // Highlight search patterns
   "vim.hlsearch": true,
+
   "vim.smartRelativeLine": true,
   "vim.gdefault": false,
-
-  // Vim Sneak - invoke with 's'. Takes 2 characters. Finds first instance of them.
   "vim.sneak": true,
   "vim.easymotion": true,
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
   "vim.surround": true,
+  "vim.mouseSelectionGoesIntoVisualMode": false,
 
   // Prevent leaving insert mode when copying text with command-c
   "vim.handleKeys": {
@@ -94,10 +95,14 @@
       "after": ["J"]
     },
 
-    // Replace find with sneak
+    // reverse ; and ,
     {
-      "before": ["f"],
-      "after": ["s"]
+      "before": [","],
+      "after": [";"]
+    },
+    {
+      "before": [";"],
+      "after": [","]
     },
 
     // Go to left window pane
