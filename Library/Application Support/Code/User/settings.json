@@ -34,7 +34,7 @@
   "vim.leader": "<Space>",
   "vim.useSystemClipboard": true,
   "vim.surround": true,
-  "vim.mouseSelectionGoesIntoVisualMode": false,
+  // "vim.mouseSelectionGoesIntoVisualMode": false,
 
   // Prevent leaving insert mode when copying text with command-c
   "vim.handleKeys": {
