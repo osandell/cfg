@@ -24,6 +24,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  // get rid of 'abc' search suggstions
+  "editor.suggest.showWords": false,
+
   // Highlight search patterns
   "vim.hlsearch": true,
 
