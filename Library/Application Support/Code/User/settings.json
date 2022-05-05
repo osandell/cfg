@@ -27,6 +27,8 @@
   // get rid of 'abc' search suggstions
   "editor.suggest.showWords": false,
 
+  "editor.acceptSuggestionOnEnter": "off",
+
   // Highlight search patterns
   "vim.hlsearch": true,
 
