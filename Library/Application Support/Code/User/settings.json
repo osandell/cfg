@@ -29,6 +29,8 @@
 
   "editor.acceptSuggestionOnEnter": "off",
 
+  "terminal.integrated.scrollback": 10000,
+
   // Highlight search patterns
   "vim.hlsearch": true,
 
