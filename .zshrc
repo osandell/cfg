@@ -77,6 +77,9 @@ ZSH_THEME="agnoster-custom"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-syntax-highlighting)
 
+# Update zshell automatically
+DISABLE_UPDATE_PROMPT=true	
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
