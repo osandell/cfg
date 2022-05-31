@@ -85,10 +85,6 @@
     "command": "workbench.view.scm"
   },
   {
-    "key": "ctrl+shift+d",
-    "command": "workbench.view.debug"
-  },
-  {
     "key": "ctrl+shift+t",
     "command": "workbench.action.terminal.focus"
   },
@@ -246,5 +242,15 @@
     "key": "cmd+r",
     "command": "-workbench.action.reloadWindow",
     "when": "isDevelopment"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]

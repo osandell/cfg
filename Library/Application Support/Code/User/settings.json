@@ -329,6 +329,5 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
-  "git.enableSmartCommit": true,
-  "editor.tabSize": 2
+  "git.enableSmartCommit": true
 }
