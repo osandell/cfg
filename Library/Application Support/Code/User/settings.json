@@ -309,6 +309,12 @@
     {
       "before": ["p"],
       "after": ["\"", "0", "d", "P"]
+    },
+
+    // Go to insert mode when pressing i
+    {
+      "before": ["i"],
+      "after": ["<Esc>", "i"]
     }
   ],
   "vim.insertModeKeyBindingsNonRecursive": [
