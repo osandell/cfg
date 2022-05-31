@@ -1312,7 +1312,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "left Control + d to cut",
+        "description" : "left Control + d to delete",
         "manipulators" : [ {
           "from" : {
             "key_code" : "d",
@@ -1321,8 +1321,7 @@
             }
           },
           "to" : [ {
-            "key_code" : "x",
-            "modifiers" : [ "left_command" ]
+            "key_code" : "delete_forward"
           } ],
           "type" : "basic"
         } ]

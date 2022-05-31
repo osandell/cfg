@@ -206,8 +206,8 @@
             :rules [[:!Wb :home]]}
       {:des "Right Control + e to go to end of the line"
             :rules [[:!We :end]]}
-      {:des "left Control + d to cut"
-            :rules [[:!Td :!Cx]]}
+      {:des "left Control + d to delete"
+            :rules [[:!Td :delete_forward]]}
       {:des "left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
       {:des "left Control + z to undo"
