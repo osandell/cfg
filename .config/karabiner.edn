@@ -113,8 +113,8 @@
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Google Chrome
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + d to duplicate tab"
-            :rules [:chrome[:!Td "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
+      {:des "Left Control + plus-key to duplicate tab"
+            :rules [:chrome[:!Thyphen "osascript ~/dev/osandell/scripts-osx/chrome/duplicate-tab.scpt"]]}
             
       {:des "Left Control + e to mark text (only useful in Notion)"
             :rules [:chrome[:!Te :!Ce]]}
