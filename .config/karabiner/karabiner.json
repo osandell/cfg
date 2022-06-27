@@ -704,7 +704,7 @@
           "from" : {
             "key_code" : "s",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
@@ -718,7 +718,7 @@
           "from" : {
             "key_code" : "v",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
@@ -732,11 +732,25 @@
           "from" : {
             "key_code" : "t",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
             "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Shift + Left Control + f to activate fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "f",
+            "modifiers" : {
+              "mandatory" : [ "right_command" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
           } ],
           "type" : "basic"
         } ]
@@ -746,7 +760,7 @@
           "from" : {
             "key_code" : "g",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
@@ -760,7 +774,7 @@
           "from" : {
             "key_code" : "d",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
@@ -774,7 +788,7 @@
           "from" : {
             "key_code" : "p",
             "modifiers" : {
-              "mandatory" : [ "left_control", "right_shift" ]
+              "mandatory" : [ "right_command" ]
             }
           },
           "to" : [ {
