@@ -621,6 +621,137 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Control + Å to switch to prev developer pane",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "open_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "open_bracket",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + ¨ to switch to next developer pane",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "close_bracket",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "grave_accent_and_tilde",
+            "modifiers" : [ "left_command" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + i to toggle inspector",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "i",
+            "modifiers" : [ "left_command", "right_option" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + m to toggle desktop / mobile",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "m",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + c to toggle element inspector",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "c",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "c",
+            "modifiers" : [ "left_command", "left_shift" ]
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Option + Right Shift + i to focus inspector",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "i",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'repeat 2 times\n tell application \"System Events\" to keystroke \"c\" using {shift down, command down}\n delay 0.1\n end repeat'"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Right Option + Right Shift + v to focus viewport",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "v",
+            "modifiers" : {
+              "mandatory" : [ "right_option", "right_shift" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"System Events\" to keystroke \"l\" using command down\n delay 0.1\ntell application \"System Events\" to key code 48 using shift down'"
+          } ],
+          "conditions" : [ {
+            "type" : "frontmost_application_if",
+            "bundle_identifiers" : [ "com.google.Chrome" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Right Option + Right Shift + g to open Grebban workspace",
         "manipulators" : [ {
           "from" : {
