@@ -204,6 +204,31 @@
           }
         }
       ]
+    },
+
+    // add {} + return to a return statement in javascript
+    {
+      "before": ["<leader>", "e"],
+      "after": [
+        "<plugys>",
+        "a",
+        "(",
+        "{",
+        "a",
+        "<Enter>",
+        "<Enter>",
+        "<Enter>",
+        "r",
+        "e",
+        "t",
+        "u",
+        "r",
+        "n",
+        "<Esc>",
+        "k",
+        "k",
+        "i"
+      ]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
