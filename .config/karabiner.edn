@@ -315,4 +315,7 @@
             '"]]}
       {:des "Left Control + Left Shift + m to swap mapping Middle Mouse Button to Minimize Window"
             :rules [[:!TSm "osascript ~/dev/osandell/scripts-osx/config-middle-mouse/config-middle-mouse.scpt"]]}
+      {:des "long press Left Control + Left Shift + Backspace to empty recycle bin"
+            :rules [[:!TSdelete_or_backspace nil nil {
+            :held "osascript -e 'tell application \"Finder\" to empty trash'"}]]}
 ]}
