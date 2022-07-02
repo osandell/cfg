@@ -168,8 +168,8 @@
       {:des "Right Shift + Left Control + s to activate Slack"
             :rules [[:!Qs "osascript -e 'tell application \"Slack\" to activate'"]]}
 
-      {:des "Right Shift + Left Control + v to activate VSCode"
-            :rules [[:!Qv "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
+      {:des "Right Shift + Left Control + c to activate VSCode"
+            :rules [[:!Qc "osascript -e 'tell application \"Visual Studio Code\" to activate'"]]}
 
       {:des "Right Shift + Left Control + t to activate iTerm"
             :rules [[:!Qt "osascript -e 'tell application \"iTerm\" to activate'"]]}

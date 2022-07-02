@@ -713,10 +713,10 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Left Control + v to activate VSCode",
+        "description" : "Right Shift + Left Control + c to activate VSCode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "v",
+            "key_code" : "c",
             "modifiers" : {
               "mandatory" : [ "right_command" ]
             }
