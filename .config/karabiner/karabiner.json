@@ -830,68 +830,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Left Control + s to activate Slack",
+        "description" : "Left Control + 1 to activate Google Chrome Grebban",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "s",
+            "key_code" : "1",
             "modifiers" : {
-              "mandatory" : [ "right_command" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Left Control + c to activate VSCode",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "c",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Visual Studio Code\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Left Control + t to activate iTerm",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "t",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Left Control + f to activate fork",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "f",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ]
-            }
-          },
-          "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
-          } ],
-          "type" : "basic"
-        } ]
-      }, {
-        "description" : "Right Shift + Left Control + g to activate Google Chrome Grebban",
-        "manipulators" : [ {
-          "from" : {
-            "key_code" : "g",
-            "modifiers" : {
-              "mandatory" : [ "right_command" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
@@ -900,26 +844,82 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Left Control + d to activate original Google Chrome (d as in development)",
+        "description" : "Left Control + 2 to activate VSCode",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "d",
+            "key_code" : "2",
             "modifiers" : {
-              "mandatory" : [ "right_command" ]
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Visual Studio Code\" to activate'"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "Right Shift + Left Control + p to activate Google Chrome Private",
+        "description" : "Left Control + 3 to activate original Google Chrome Dev",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "p",
+            "key_code" : "3",
             "modifiers" : {
-              "mandatory" : [ "right_command" ]
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + 4 to activate fork",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "4",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + 7 to activate Slack",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "7",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + 8 to activate iTerm",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "8",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "osascript -e 'tell application \"iTerm\" to activate'"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
+        "description" : "Left Control + 9 to activate Google Chrome Private",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "9",
+            "modifiers" : {
+              "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
