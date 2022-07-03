@@ -49,13 +49,24 @@
   },
 
   "vim.normalModeKeyBindingsNonRecursive": [
+    // go up / down 5 lines
     {
-      "before": ["J"],
-      "after": ["5", "j"]
+      "before": ["<C-k>"],
+      "after": ["5", "k"]
     },
     {
+      "before": ["<C-j>"],
+      "after": ["5", "j"]
+    },
+
+    // go up / down half a page
+    {
       "before": ["K"],
-      "after": ["5", "k"]
+      "after": ["<C-u>"]
+    },
+    {
+      "before": ["J"],
+      "after": ["<C-d>"]
     },
 
     // Copy to the 0 registry instead of default clipboard when pressing d
@@ -112,16 +123,6 @@
       "after": [","]
     },
 
-    // go up/down one page
-    {
-      "before": ["<C-k>"],
-      "after": ["<C-u>"]
-    },
-    {
-      "before": ["<C-j>"],
-      "after": ["<C-d>"]
-    },
-
     // Clear last search highlighting
     {
       "before": ["<Leader>", "/"],
@@ -156,7 +157,7 @@
     // Log to console (javascript)
     {
       "before": ["<leader>", "l"],
-      "after": ["d", "d", "O", "<Esc>", "o", "<Esc>"],
+      "after": ["0", "d", "w", "d", "d", "O", "<Esc>", "o", "<Esc>"],
       "commands": [
         {
           "command": "editor.action.insertSnippet",
@@ -178,6 +179,9 @@
           "args": {
             "snippet": "$1console.log(\"\\x1b[8m\\x1b[40m\\x1b[0m\\x1b[7m%c    $CLIPBOARD    \\x1b[8m\\x1b[40m\\x1b[0m\\n\", 'color: white; background: black; font-weight: bold', $CLIPBOARD);"
           }
+        },
+        {
+          "command": "workbench.action.files.save"
         }
       ]
     },
@@ -249,6 +253,18 @@
     {
       "before": ["i"],
       "after": ["<Esc>", "i"]
+    }
+  ],
+
+  "vim.insertModeKeyBindingsNonRecursive": [
+    // go up / down 5 lines
+    {
+      "before": ["<C-k>"],
+      "after": ["<Esc>", "5", "k", "i"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<Esc>", "5", "j", "i"]
     }
   ],
 
