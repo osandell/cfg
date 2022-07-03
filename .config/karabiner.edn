@@ -87,20 +87,24 @@
             [[:!Tright_arrow "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]
             [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
       }
-      {:des "Right Control + space to play / pause media"
-            :rules [[:!Wspacebar  "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]}
+
+      {:des "Esc to ALONE: play or pause music | DOUBLE: Caps Lock"
+      :rules [
+            [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
+            [:##escape ["escape_twice" 1] ["escape_twice" 0]
+            {:delayed {:invoked ["osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt" ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Shift + p to play / pause / skip in Focus-to-do"
+      {:des "Left Control + Left Shift + p to play / pause | skip in Focus-to-do"
             :rules [[:!TSp nil nil {:alone "osascript ~/dev/osandell/scripts-osx/focus-to-do/pause.scpt"
             :held "osascript ~/dev/osandell/scripts-osx/focus-to-do/next.scpt"}]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Notification center
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-      {:des "Left Control + Left Shift + c to close all notifications / snooze 1 notification"
+      {:des "Left Control + Left Shift + c to close all notifications | snooze 1 notification"
             :rules[[:!TSc nil nil {:alone "osascript ~/dev/osandell/scripts-osx/notification-center/close-notifications.scpt"
             :held "osascript ~/dev/osandell/scripts-osx/notification-center/snooze-notification.scpt"}]]}
 
@@ -170,11 +174,11 @@
       {:des "Left Control + c to toggle element inspector"
             :rules [:chrome[:!Tc :!CSc]]}
 
-      {:des "Right Option + Right Shift + i to focus inspector"
-            :rules [:chrome[:!ERi "osascript -e 'repeat 2 times\n tell application \"System Events\" to keystroke \"c\" using {shift down, command down}\n delay 0.1\n end repeat'"]]}
+      {:des "Right Option + Right Shift + d to focus dev tools"
+            :rules [:chrome[:!ERd [:!CSc :!CSc]]]}
 
       {:des "Right Option + Right Shift + v to focus viewport"
-            :rules [:chrome[:!ERv "osascript -e 'tell application \"System Events\" to keystroke \"l\" using command down\n delay 0.1\ntell application \"System Events\" to key code 48 using shift down'"]]}
+            :rules [:chrome[:!ERv [:!Cl :!COdown_arrow]]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Slack
@@ -232,8 +236,6 @@
             [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
-      {:des "Esc to Caps Lock"
-            :rules [[:##escape :caps_lock]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
@@ -242,14 +244,16 @@
             :rules [[:!Wb :home]]}
       {:des "Right Control + e to go to end of the line"
             :rules [[:!We :end]]}
-      {:des "left Control + d to delete"
+      {:des "Left Control + d to delete"
             :rules [[:!Td :delete_forward]]}
-      {:des "left Control + y to copy"
+      {:des "Left Control + y to copy"
             :rules [[:!Ty :!Cc]]}
-      {:des "left Control + z to undo"
+      {:des "Left Control + z to undo"
             :rules [[:!Tz :!Cz]]}
-      {:des "left Control + space to step to the right"
+      {:des "Left Control + Space to step to the right"
             :rules [[:!Tspacebar :right_arrow]]}
+      {:des "Right Control to add a space to the right of the cursor"
+            :rules [[:!Wspacebar [:spacebar :left_arrow]]]}
       {:des "§ to Delete"
             :rules [[:##non_us_backslash :delete_forward]]}
       {:des "Windows style redo"
