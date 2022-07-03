@@ -14,6 +14,13 @@
 ;; E  | right_option
 ;; R  | right_shift
 ;; P  | caps_lock
+;; 
+;; Example how to map both ALONE and DOUBLE to the same button with custom delay setting:
+;;   {:des "Esc to ALONE: Esc | DOUBLE: Caps Lock"
+;;       :rules [
+;;             [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
+;;             [:##escape ["escape_twice" 1] ["escape_twice" 0]
+;;             {:delayed {:invoked :escape ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
 
 ;; Define different kinds of keyboards
 {
@@ -89,10 +96,7 @@
       }
 
       {:des "Esc to ALONE: play or pause music | DOUBLE: Caps Lock"
-      :rules [
-            [:##escape [:caps_lock  ["escape_twice" 0]] ["escape_twice" 1]]
-            [:##escape ["escape_twice" 1] ["escape_twice" 0]
-            {:delayed {:invoked ["osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt" ["escape_twice" 0]] :canceled ["escape_twice" 0]} :params {:delay 400} }]]}
+      :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Focus To-Do
@@ -220,8 +224,8 @@
       {:des "Left Control + 8 to activate iTerm"
             :rules [[:!T8 "osascript -e 'tell application \"iTerm\" to activate'"]]}
 
-      {:des "Left Control + 9 to activate Google Chrome Private"
-            :rules [[:!T9 "osascript -e 'tell application \"Google Chrome Private\" to activate'"]]}
+      {:des "Left Control + 9 to activate Google Chrome Personal"
+            :rules [[:!T9 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
@@ -236,6 +240,8 @@
             [:!Pequal_sign :f12] [:!Oequal_sign :f12] [:!Eequal_sign :f12]]}
       {:des "Caps Lock to Left Control if holding, Esc if pressed alone"
             :rules [[:##caps_lock :left_control nil {:alone :escape}]]}
+      {:des "Esc to Caps Lock"
+            :rules [[:##escape :caps_lock]]}
       {:des "Option + Shift + h/l to Option + Shift + left/right arrow - To highlight words more easily"
             :rules [[:!SOh :!SOleft_arrow] [:!SOl :!SOright_arrow]]}
       {:des "Option + Shift + j/k to Shift + down/up arrow - To highlight lines more easily in combination with above hotkeys"
