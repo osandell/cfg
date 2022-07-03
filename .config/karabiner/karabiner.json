@@ -364,7 +364,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Esc to ALONE: play or pause music | DOUBLE: Caps Lock",
+        "description" : "Right Shift + Caps Lock to play / pause media",
         "manipulators" : [ {
           "from" : {
             "key_code" : "caps_lock",

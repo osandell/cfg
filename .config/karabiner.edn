@@ -95,7 +95,7 @@
             [:!TWl "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-forward.scpt"]]
       }
 
-      {:des "Esc to ALONE: play or pause music | DOUBLE: Caps Lock"
+      {:des "Right Shift + Caps Lock to play / pause media"
       :rules [[:!Rcaps_lock "osascript ~/dev/osandell/scripts-osx/browser-media-control/udemy-youtube-play-pause.scpt"]]}
 
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
