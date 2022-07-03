@@ -866,7 +866,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 3 to activate original Google Chrome Dev",
+        "description" : "Left Control + 3 to activate Google Chrome Incognito",
         "manipulators" : [ {
           "from" : {
             "key_code" : "3",
@@ -875,7 +875,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Google Chrome Dev\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Google Chrome Incognito\" to activate'"
           } ],
           "type" : "basic"
         } ]
