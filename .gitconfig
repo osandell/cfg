@@ -1,5 +1,5 @@
 [user]
-	email = olof@grebban.com
+	email = 83674246+osandell@users.noreply.github.com
 	name = Olof Sandell
 [core]
 	editor = vim
@@ -27,5 +27,7 @@
 [rebase]
 	abbreviatieCommands = true
 	autoSquash = true
-[credential]
-	helper = osxkeychain
+[includeIf "gitdir:~/dev/olofgrebban/"]
+  path = ~/dev/olofgrebban/.gitconfig
+
+

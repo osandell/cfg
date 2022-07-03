@@ -227,6 +227,10 @@
       {:des "Left Control + 9 to activate Google Chrome Personal"
             :rules [[:!T9 "osascript -e 'tell application \"Google Chrome Personal\" to activate'"]]}
 
+      {:des "Left Control + 0 to activate Google Chrome YouTube"
+            :rules [[:!T0 "osascript -e 'tell application \"Google Chrome YouTube\" to activate'"]]}
+
+      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
       ;; Misc
       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
