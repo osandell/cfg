@@ -215,11 +215,11 @@
       {:des "Left Control + 3 to activate Google Chrome Incognito"
             :rules [[:!T3 "osascript -e 'tell application \"Google Chrome Incognito\" to activate'"]]}
 
-      {:des "Left Control + 4 to activate fork"
-            :rules [[:!T4 "osascript -e 'tell application \"Fork\" to activate'"]]}
+      {:des "Left Control + 4 to activate Slack"
+            :rules [[:!T4 "osascript -e 'tell application \"Slack\" to activate'"]]}
 
-      {:des "Left Control + 7 to activate Slack"
-            :rules [[:!T7 "osascript -e 'tell application \"Slack\" to activate'"]]}
+      {:des "Left Control + 5 to activate Fork"
+            :rules [[:!T5 "osascript -e 'tell application \"Fork\" to activate'"]]}
 
       {:des "Left Control + 8 to activate iTerm"
             :rules [[:!T8 "osascript -e 'tell application \"iTerm\" to activate'"]]}

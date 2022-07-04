@@ -880,7 +880,7 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 4 to activate fork",
+        "description" : "Left Control + 4 to activate Slack",
         "manipulators" : [ {
           "from" : {
             "key_code" : "4",
@@ -889,21 +889,21 @@
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
           } ],
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Control + 7 to activate Slack",
+        "description" : "Left Control + 5 to activate Fork",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "7",
+            "key_code" : "5",
             "modifiers" : {
               "mandatory" : [ "left_control" ]
             }
           },
           "to" : [ {
-            "shell_command" : "osascript -e 'tell application \"Slack\" to activate'"
+            "shell_command" : "osascript -e 'tell application \"Fork\" to activate'"
           } ],
           "type" : "basic"
         } ]
